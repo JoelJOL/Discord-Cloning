@@ -28,6 +28,7 @@ body {
   align-items: right;
   text-decoration: none;
   color: #5865f2;
+  font-size: 15px;
   padding: 30px;
 }
 
@@ -36,6 +37,7 @@ body {
   border: none;
   font-family: myFirstFont;
   color: #5865f2;
+  font-size: 15px;
   padding: 30px;
 }
 .header-navigationBar a:hover {
@@ -57,14 +59,10 @@ body {
   color: #ffffff;
 }
 .top-content-searchBar {
-  width: 720px;
-  height: 80px;
   background-color: white;
 }
 #top-content-searchbar-input {
   border: none;
-  width: 720px;
-  padding: 30px;
 }
 
 .divRow {
