@@ -1,0 +1,199 @@
+*{
+    margin:0;
+}
+
+
+@font-face {           
+    font-family: 'ginto';
+    src: url(/Discover/Ginto-Nord-700.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+header{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+nav{
+    height: 80px;
+    display: flex;
+    width: 85%;
+    margin: 0px 100px 0px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo-image{
+    width: 100px;
+}
+#button-login{
+    border-radius: 20px;
+}
+#nav-items{
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+    /* color: white; */
+}
+#head-picture{
+    background-image: url("/Discover/images/discover-main-image.jpg");
+    background-size: 100% 100%;
+     height:400px;
+     margin-bottom: 50px;
+}
+#head-picture-heading{
+    color:white;
+    font-size: 50px;
+    font-family: ginto;
+    /* display: flex; */
+    width: 700px;
+    text-align: center;
+    margin-left: 300px;
+    padding-top: 150px;
+    line-height: 45px;
+}
+#head-pic-text{
+    color: white;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 460px;
+}
+
+#main-feed-div{
+margin: 0px 200px 0px 200px;
+}
+#explore-search-bar{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(235, 248, 254);
+    border: 0px;
+}
+#explore-search-bar input:active{
+    border: 2px solid rgb(122, 129, 255) 
+  }
+#searchbutton{
+    width: 60px;
+    border-radius: 10px;
+    background-color: rgb(120, 125, 213) ;
+    border: 0px;
+}
+#searh-button-image{
+    width: 30px;
+    cursor: pointer;
+}
+input[type=text]:focus{
+    outline: 2px solid rgb(39, 49, 249)     
+  }
+  #search-box-div input:active{
+    border: 2px solid rgb(39, 49, 249) 
+  }
+#search-box-div{
+    width: 90%;
+    height: 50px;
+    background-color: rgb(213, 213, 213);
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+#main-categories-div{
+    position: relative;
+    width: 28%;
+    background-color: rgb(255, 255, 255);
+}
+.category{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 12px 5px 12px 5px;
+    justify-content: space-between;
+}
+.category:hover{
+    background-color: rgb(235, 235, 235);
+}
+.category-image{
+    width: 35px;
+}
+.left-side-category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search-bar-searchbutton{
+    display: flex;
+    justify-content: space-between;
+}
+#div-with-feeds{
+    position: absolute;
+    left:37%;
+    top:91%;
+    width: 55%;
+}
+.feed1{
+    display: flex;
+    margin-top: 10px;
+}
+.feed-heading{
+    padding:10px 20px 20px 0px;
+}
+.feed-content{
+    padding:10px 20px 20px 0px;
+}
+.feed-right-side{
+    margin-left: 10px;
+}
+#make-public{
+    width: 100%;
+    height: 320px;
+    background-color: blue;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#make-public-heaing{
+    color: white;
+    width: 1000px;
+}
+#make-public-button{
+    padding: 10px;
+    height: 60px;
+    width: 300px;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    margin-left: 160px;
+    border: 0px;
+}
+
+#inner-make-public{
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+    justify-content: center;
+    width: 650px;
+    height: 100px;  
+}
+#pages-number{
+    margin-top: 200%;
+    margin-left: 40%;
+}
+.page{
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0px;
+}
+.page:hover{
+    color: white;
+    background-color: rgb(83, 83, 255);
+}
