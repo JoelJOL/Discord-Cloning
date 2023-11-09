@@ -1,7 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+nav{
+    height: 80px;
+    display: flex;
+    width: 85%;
+    margin: 0px 100px 0px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo-image{
+    width: 100px;
+}
+#button-login{
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+#button-login:hover{
+    color: blue;
+}
+#nav-items{
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+    /* color: white; */
+}
 .header{
     display: flex;
     background-color: #5865f2;
-    padding: 55px;
+    padding-top: 210px;
+    padding-left: 70px;
+    padding-right:70px;
+    padding-bottom: 70px;
 }
 .header-left{
     flex: 1;
@@ -11,7 +54,7 @@
 }
 @font-face {
     font-family: "discordfont";
-    src: url(Ginto-Nord-700.woff) format('woff');
+    src: url(/Discord-Cloning/Safety/styles/Ginto-Nord-700.woff) format('woff');
   }
 .header-heading{
     color: white;
@@ -21,6 +64,7 @@
     max-width: 595px;
     line-height: 100%;
     text-transform: uppercase;
+    padding-bottom: 40px;
 }
 .header-paragraph p{
     color: white;
@@ -52,6 +96,7 @@
     display: flex;
     background-color: #5865f2;
     padding-left: 80px;
+    padding-right: 80px;
     padding-bottom: 40px;
 }
 .button-style:hover{
@@ -72,6 +117,7 @@
     display: flex;
     background-color: white;
     padding-top: 70px;
+    padding-bottom: 70px;
 }
 .youtube-video{
     flex: 3;
@@ -100,4 +146,41 @@
     flex: 1;
    padding-top: 350px;
    padding-left: 100px;
+}
+.safety-detail-content{
+    display: flex;
+    background-color: #f6f6f6;
+    padding-top: 100px;
+    padding-left: 70px;
+    padding-right:70px;
+    padding-bottom: 70px;
+}
+.safety-detail-text{
+    flex: 1;
+}
+.safety-detail-image{
+    flex: 1;
+}
+.safety-detail-heading{
+    color: black;
+    font-family:Ggsans,sans-serif;
+    font-size: 45px;
+    font-weight: 980;
+    max-width: 595px;
+    line-height: 27px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-bottom: 38px;
+}
+.safety-detail-paragraph p{
+    color: #50555f;
+    font-family: Ggsans,sans-serif;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-bottom: 13px;
+    line-height: 24px;
+}
+.safety-detail-image{
+    width: 20px;
+   height: 40px;
 }
