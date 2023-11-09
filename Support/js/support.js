@@ -1,6 +1,6 @@
 function createImage(image, divRow) {
   const Card = document.createElement("div");
-  Card.className = "card";
+  Card.className = "highlight card";
   const Image = document.createElement("img");
   Image.src = image;
 
