@@ -4,38 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="styles/login.css" />
   </head>
-  <body>
-    <div class="container">
-      <div class="container-form">
-        <div class="container-form heading">
-          <h3>Welcome back</h3>
-          <p>We're so excited to see you again</p>
-        </div>
-        <div class="container-form input">
-          <label>EMAIL OR PHONE NUMBER</label>
-          <input type="text" />
-        </div>
-        <div class="container-form input">
-          <label>PASSWORD</label>
-          <input type="password" />
-          <a href="">Forgot your passsword?</a>
-        </div>
-        <div class="container-form login">
-          <button class="login-button">Log In</button>
-          <span>Need an account?</span><a href="">Register</a>
-        </div>
-      </div>
-      <div class="container-form qr">
-        <img id="qrCode" src="img/exampleQR.png" alt="Login QR" />
-        <h3>Log In with QR Code</h3>
-        <p>
-          Scan this with the <strong>Discord mobile app</strong> to log in
-          instantly.
-        </p>
-      </div>
-    </div>
+  <body onload="login()">
+    <div class="container" id="outer"></div>
   </body>
-  <script src="login.js"></script>
+  <script src="js/login.js"></script>
 </html>

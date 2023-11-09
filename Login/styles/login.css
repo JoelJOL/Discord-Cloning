@@ -3,7 +3,10 @@
   padding: 0;
 }
 body {
-  background-color: aquamarine;
+  background-image: url(/Login/img/bg.png);
+  background-size: cover;
+  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 .container {
   display: flex;
@@ -11,12 +14,18 @@ body {
   color: black;
   padding: 10px;
   width: fit-content;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 20%;
 }
 .container-form {
+  flex: 2;
   display: flex;
   flex-direction: column;
   padding: 10px;
   margin: 5px;
+  border: 1px solid green;
 }
 .heading {
   text-align: center;
@@ -25,6 +34,7 @@ body {
   padding: 10px;
 }
 .qr {
+  flex: 1;
   text-align: center;
   padding: 10px;
 }
@@ -33,4 +43,7 @@ body {
   margin: auto;
   height: 250px;
   width: 250px;
+}
+.desc {
+  text-align: center;
 }
