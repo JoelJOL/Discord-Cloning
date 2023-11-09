@@ -1,0 +1,21 @@
+.card .card-link {
+  text-decoration: none;
+  position: static;
+  &:before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    white-space: nowrap;
+    z-index: 0;
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      background: rgba(0, 149, 255, 0.2);
+    }
+  }
+}

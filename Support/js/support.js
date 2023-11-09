@@ -1,20 +1,15 @@
 function createImage(image, divRow) {
+  const Card = document.createElement("div");
+  Card.className = "card";
   const Image = document.createElement("img");
   Image.src = image;
-  //func2();
-  divRow.appendChild(Image);
+
+  Image.style.width = "100px";
+  Image.style.height = "100px";
+  Card.appendChild(Image);
+  func2(Card, divRow);
+  return;
 }
-//async function func2(){
-// try{
-//      const request= await fetch("https://dummyjson.com/posts?limit=10&skip=10&select=title,body");
-//       let data=await request.json();
-//     console.log(data);
-//  const Card = document.createElement("a");
-//Card.className = "linkcard";
-//const content = document.createElement("div");
-//contentStore.className = "content";
-//
-//   const mainDiv = document.querySelector("body");
 
 async function func() {
   try {
@@ -26,12 +21,17 @@ async function func() {
 
     for (let index = 0; index < data.length; index++) {
       let image = data[index].download_url;
-
       const divRow = document.createElement("div");
       divRow.className = "divRow";
 
       image = data[index].download_url;
       createImage(image, divRow);
+      for (let index1 = 0; index1 < 3; index1++) {
+        index++;
+        image = data[index].download_url;
+        createImage(image, divRow);
+      }
+
       console.log(divRow);
 
       mainDiv.appendChild(divRow);

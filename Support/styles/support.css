@@ -1,6 +1,9 @@
 body {
-  font-family: "gg_sans", "Noto Sans", "Helvetica Neue", Arial, Helvetica,
-    sans-serif;
+  font-family: myFirstFont;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/Discord-Cloning/Support/fonts/Ginto-Nord-700\ 2.woff);
 }
 .header {
   display: flex;
@@ -24,18 +27,15 @@ body {
 .header-navigationBar a {
   align-items: right;
   text-decoration: none;
-  font-weight: bold;
   color: #5865f2;
-  font-size: 23px;
   padding: 30px;
 }
 
 #header-navigationBar-language {
   appearance: none;
-  font-weight: bold;
   border: none;
+  font-family: myFirstFont;
   color: #5865f2;
-  font-size: 23px;
   padding: 30px;
 }
 .header-navigationBar a:hover {
@@ -51,11 +51,9 @@ body {
   padding-top: 90px;
   text-align: center;
   margin: 0 auto;
-  font-weight: bold;
   font-size: 30px;
 }
 #top-content-title {
-  font-weight: bold;
   color: #ffffff;
 }
 .top-content-searchBar {
@@ -73,9 +71,9 @@ body {
   display: flex;
   margin-inline: 20%;
 }
-
-.Card {
+.card {
   width: 65%;
+  height: 65%;
   margin: 2%;
   text-align: center;
   background-color: #f5f5f5;
@@ -86,19 +84,17 @@ body {
 
 section {
   text-align: center;
-  font-family: Rubik, sans-serif;
+  font-family: myFirstFont;
 }
 #welcome-title {
   font-size: 40px;
 }
 #welcome-beginnerGuide {
   font-size: 20px;
-  font-weight: bold;
   line-height: 40px;
 }
 #welcome-beginnerGuide-link {
   text-decoration: none;
-  font-weight: bold;
   color: #5865f2;
   font-size: 20px;
 }
