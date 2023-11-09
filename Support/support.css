@@ -1,5 +1,6 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "gg_sans", "Noto Sans", "Helvetica Neue", Arial, Helvetica,
+    sans-serif;
 }
 .header {
   display: flex;
@@ -28,6 +29,7 @@ body {
   font-size: 23px;
   padding: 30px;
 }
+
 #header-navigationBar-language {
   appearance: none;
   font-weight: bold;
@@ -64,4 +66,42 @@ body {
 #top-content-searchbar-input {
   border: none;
   width: 720px;
+  padding: 30px;
+}
+
+.divRow {
+  display: flex;
+  margin-inline: 20%;
+}
+
+.Card {
+  width: 65%;
+  margin: 2%;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 2% 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+section {
+  text-align: center;
+  font-family: Rubik, sans-serif;
+}
+#welcome-title {
+  font-size: 40px;
+}
+#welcome-beginnerGuide {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+#welcome-beginnerGuide-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5865f2;
+  font-size: 20px;
+}
+#welcome-beginnerGuide-link:hover {
+  text-decoration: underline;
 }
