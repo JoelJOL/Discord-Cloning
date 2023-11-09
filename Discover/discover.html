@@ -26,7 +26,12 @@
         </div>
       </nav>
     </header>
-    <div id="head-picture"></div>
+    <div id="head-picture">
+      <div id="head-picture-heading">FIND YOUR COMMUNITY ON DISCORD</div>
+      <p id="head-pic-text">
+        From gaming, to music, to learning, there's a place for you.
+      </p>
+    </div>
     <br /><br />
     <div id="main-feed-div">
       <div id="search-bar-searchbutton">
@@ -37,48 +42,65 @@
             placeholder="Explore communities"
           />
         </div>
-        <button id="searchbutton">SS</button>
+        <button id="searchbutton">
+          <img src="/Discover/images/search-icon.png" id="searh-button-image" />
+        </button>
       </div>
       <br /><br /><br />
       <div id="main-categories-div">
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img
+              src="/Discover/images/category-all.png"
+              class="category-image"
+            />
             &nbsp;&nbsp;All
           </div>
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img
+              src="/Discover/images/category-gaming.jpg"
+              class="category-image"
+            />
             &nbsp;&nbsp;Gaming
           </div>
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img
+              src="/Discover/images/entertainment-icon.png"
+              class="category-image"
+            />
             &nbsp;&nbsp;Entertainment
           </div>
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img
+              src="/Discover/images/education-icon.png"
+              class="category-image"
+            />
             &nbsp;&nbsp;Education
           </div>
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img
+              src="/Discover/images/category-gaming.jpg"
+              class="category-image"
+            />
             &nbsp;&nbsp;Science & Tech
           </div>
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category" class="category">
           <div class="left-side-category">
-            <img src="/images/category-all.png" class="category-image" />
+            <img src="/Discover/images/music-icon.png" class="category-image" />
             &nbsp;&nbsp;Music
           </div>
           <div class="category-server-number">3390</div>
@@ -86,20 +108,58 @@
       </div>
       <div id="div-with-feeds">
         <h2>30467 Results Found</h2>
+        <!-- 
+
         <div class="feed1">
           <div class="feed-image-div">
-            <img src="/images/feed-image.svg" class="feed-image" />
+            <img src="/Discover/images/feed-image.svg" class="feed-image" />
           </div>
           <div class="feed-right-side">
-            <h4>Leonardo Ai</h4>
-            <p>
+            <h4 class="feed-heading">Leonardo Ai</h4>
+            <p class="feed-content">
               Leonardo AI is a generative platform for content creation, create
               game assests, artwork, design elements and more.
             </p>
             <p>129,2948 Online 7593722 Members</p>
           </div>
         </div>
+
+
+         -->
       </div>
     </div>
+    <div id="pages-number">
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(0)">1</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(1)">2</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(2)">3</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(3)">4</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(4)">5</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" onclick="reloadDIV(5)">6</button>
+      </a>
+    </div>
+    <div id="make-public">
+      <div id="inner-make-public">
+        <div>
+          <h1 id="make-public-heaing">
+            Have a server you want to add to Discovery?
+          </h1>
+        </div>
+        <br />
+        <button id="make-public-button">Make Your Community Public</button>
+      </div>
+    </div>
+    <script src="/Discover/discover.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </body>
 </html>
