@@ -1,16 +1,19 @@
+let index = 0;
+
 async function func2(Card, divRow) {
   try {
     const request = await fetch(
-      "https://dummyjson.com/comments?limit=10&skip=10&select=body,username"
+      "https://dummyjson.com/comments?limit=10&select=body,username"
     );
     let data = await request.json();
     console.log(data);
 
     // console.log(divRow);
-    for (let index = 0; index < data.comments.length; index++) {
+    if (index < data.comments.length) {
       let comment = data.comments[index];
       create(comment, Card);
       divRow.appendChild(Card);
+      index++;
       return;
     }
   } catch (error) {
