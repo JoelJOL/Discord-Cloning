@@ -1,9 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Discord</title>
+    <link rel="stylesheet" href="styles/support.css" />
+    <link rel="stylesheet" href="styles/support-1.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-icon">
+        <a href="support.html"
+          ><img
+            src="images/cc59daa07820943e943c2fc283b9079d7003ff76.svg"
+            id="header-icon-image"
+        /></a>
+      </div>
+      <div class="header-navigationBar">
+        <a href="support-feedback.html" id="header-navigationBar-feedback"
+          >Feedback</a
+        >
+        <select id="header-navigationBar-language">
+          <option>English(US)</option>
+          <option>Dansk</option>
+          <option>Deutsch</option>
+          <option>Italiano</option>
+        </select>
+        <a href="support-submit-request.html" id="header-navigationBar-request"
+          >Submit a Request</a
+        >
+        <a href="signin.html" id="header-navigationBar-signin">Sign In</a>
+      </div>
+    </header>
+    <div class="top">
+      <div class="top-content">
+        <h1 id="top-content-title">Help Center</h1>
+        <div id="top-content-searchbar">
+          <img src="images/search.svg" />
+          <input
+            type="text"
+            placeholder="Search"
+            id="top-content-searchBar-input"
+            size="100"
+          />
+        </div>
+      </div>
+    </div>
+    <section class="welcome">
+      <h2 id="welcome-title">Need Help? We've got your back.</h2>
+      <p id="welcome-beginnerGuide">
+        From account settings to permissions, find help for everything
+        Discord.<br />
+        If you're new to Discord and looking for tips, check out our
+        <a href="" id="welcome-beginnerGuide-link">Beginner's Guide</a>.
+      </p>
+      <br />
+      <br />
+      <br />
+    </section>
+  </body>
+  <script src="js/support.js"></script>
+  <script src="js/support-1.js"></script>
 </html>
