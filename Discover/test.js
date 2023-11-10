@@ -1,4 +1,4 @@
 
-fetch('https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=100')
+fetch('https://picsum.photos/v2/list?page=2&limit=100')
       .then(response => response.json())
-      .then(json => console.log(json.photos[0].url))
+      .then(json => console.log(json))
