@@ -3,12 +3,12 @@
 
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
-    <div class="top-container">
+    <div class="top-container" >
         <header>
-            <img src="discord-logo.png">
+            <img src="images/discord-logo.png">
             <div class="center-nav">
                 <a href="download.html">Download</a>
                 <a href="whydiscord.html">Why Discord?</a>
@@ -20,17 +20,25 @@
            
         </header>
 
+        <div class="usersonline">
+            <!-- <img id="online" src="/Homepage/images/online.png"> -->
+            <!-- <h1>Online</h1> -->
+            <!-- <h1>Random</h1> -->
+           
+        </div>
+       
+
         <div class="center-box">
             <h1>IMAGINE A PLACE...</h1>
             <p>...where you can belong to a school club, a gaming group, or a worldwide art community.<br> Where just you and a handful of friends can spend time together. A place that makes it easy <br>to talk every day and hang out more often.</p>
             <div class="nav-buttons">
                <a href="download.html" >Download for Windows</a>
-               <button href="open.html">Open Discord in your browser</button>
+               <button id="opendis" href="open.html">Open Discord in your browser</button>
             </div>
         </div>
 
         <div class="leftpic">
-            <img src="top-container-left.svg">
+            <img src="images/top-container-left.svg">
         </div>
    
 
@@ -41,14 +49,16 @@
     </div>
 
 
-
-    <div class="container">
-        <img class="container-img" src="">
+<div class="dynamicbox">
+    <!-- <div class="container">
+        <img class="container-img" src="/Homepage/images/Screenshot (88).png">
         <div class="description">
             <h2>Create an invite-only place where you belong</h2>
             <p>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</p>
         </div>
-    </div>
+    </div> -->
+</div>
+   
 
      
 <div class="lastcontainer">
@@ -63,7 +73,7 @@
         <div class="footer-nav">
             <div class="socials">
                
-                <img id="flag" src="Flag-logo.png">
+                <img id="flag" src="images/Flag-logo.png">
                 
                 <select id="country">
                         <option value="English">English, USA</option>
@@ -73,10 +83,10 @@
                         <option value="Kurdish">Kurdish, Turkey</option>
                 </select>
                 <br>
-                <img id="x1" src="twitter-svg.svg" width="24px">
-                <img id="x1" src="instagram-svg.svg" width="24px">
-                <img id="x1" src="facebook-svg.svg" width="24px">
-                <img  id="x1" src="youtube-svg.svg" width="30px">
+                <img id="x1" src="images/twitter-svg.svg" width="24px">
+                <img id="x1" src="images/instagram-svg.svg" width="24px">
+                <img id="x1" src="images/facebook-svg.svg" width="24px">
+                <img  id="x1" src="images/youtube-svg.svg" width="30px">
             </div>
             <div class="space">
 
@@ -129,7 +139,7 @@
         </div>
         <div class="footer-bar">
             <div class="footer-bar-image">
-                <img src="discord-logo.png">
+                <img src="images/discord-logo.png">
             </div>
             <div class="footer-bar-signup">
                 <a href="">Sign Up</a>
@@ -141,7 +151,7 @@
 
 
 
-
+<script src="/Homepage/JS/home.js"></script>
 
 </body>
 </html>

@@ -5,18 +5,29 @@
 
 @font-face {
     font-family: "discordfont";
-    src: url(Ginto-Nord-700.woff) format('woff');
+    src:url(/Homepage/styles/Ginto-Nord-700.woff) format('woff');
   }
 
 body {
     
 }
 
+.usersonline
+{
+
+position: relative;
+right: 500px;
+bottom: 150px;
+color: rgb(94, 92, 92);
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
 .leftpic
 {
     
   position: absolute;
-  bottom: 53px;
+  bottom: 52px;
   left: 400px;
    
 }
@@ -120,6 +131,12 @@ header>a {
     font-family: discordfont;
     
 }
+#opendis
+{
+    font-family: discordfont;
+    font-size: medium;
+}
+
 
 .top-container .center-box .nav-buttons a {
     display: flex;
@@ -162,9 +179,10 @@ header>a {
 }
 
 .container-img {
-    max-width: 678px;
-    max-height: 440px;
-    width: 50%;
+    /* max-width: 678px;
+    max-height: 440px; */
+ 
+    
    
 }
 
