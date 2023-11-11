@@ -64,6 +64,8 @@ body {
 #top-content-searchbar input {
   border: none;
   height: 40px;
+  width: 900px;
+  font-size: 25px;
 }
 
 .divRow {
