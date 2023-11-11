@@ -45,7 +45,7 @@ async function getData(url){
     var safetyDetailArrowDiv=document.createElement('div');
     safetyDetailArrowDiv.classList.add("arrow");
     var img=document.createElement('img');
-    img.setAttribute('src',"/Discord-Cloning/Safety/images/arrow.png");
+    img.setAttribute('src',"images/arrow.png");
     safetyDetailArrowDiv.appendChild(img);
     safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
@@ -97,7 +97,7 @@ async function getData(url){
     var safetyDetailArrowDiv=document.createElement('div');
     safetyDetailArrowDiv.classList.add("arrow");
     var img=document.createElement('img');
-    img.setAttribute('src',"/Discord-Cloning/Safety/images/arrow.png");
+    img.setAttribute('src',"images/arrow.png");
     safetyDetailArrowDiv.appendChild(img);
     safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
