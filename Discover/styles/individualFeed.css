@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+@font-face {           
+    font-family: 'ggsans';
+    src: url(/Discover/styles/ggsans-Bold.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 header{
     position: absolute;
     width: 100%;
@@ -38,8 +44,36 @@ a{
     color: white;
     /* color: white; */
 }
-#feed-head-div{
+.feed-head-div{
     width: 100%;
     height: 310px;
     background-color: blue;
+}
+.feed-main-image-div{
+    position: absolute;
+    
+    top: 20%;
+}
+.feed-main-image{
+    width: 1150px;
+    height: 500px;
+    margin-left: 100px;
+}
+.feed-content-div{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 300px;
+}
+.feed-content-title{
+    font-size: 50px;
+    font-family: ggsans;
+    margin-left: 200px;
+    padding-top: 100px;
+}
+.feed-content-paragraph{
+    font-family: ggsans;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-right: 500px;
 }

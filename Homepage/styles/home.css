@@ -27,7 +27,7 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
 {
     
   position: absolute;
-  bottom: 52px;
+  bottom: -30px;
   left: 400px;
    
 }
@@ -133,6 +133,7 @@ a{
     font-size: medium;
     width: 350px;
     height: 50px;
+    cursor: pointer;
 }
 
 
