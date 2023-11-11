@@ -1,7 +1,5 @@
 const url="https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=6"
  
- 
- 
 async function getData(url){
     try{
         const response = await fetch(url,{
@@ -55,8 +53,8 @@ async function getData(url){
     safetyDetailImage.setAttribute("src",responseData.photos[i].url);
     safetyDetailImageDiv.appendChild(safetyDetailImage);
     safetyDetailDiv.appendChild(safetyDetailImageDiv);
-    safetyDetailTag[0].appendChild(safetyDetailDiv);
-    }
+    safetyDetailTag[0].appendChild(safetyDetailDiv);   
+}
     else
     {
     let safetyDetailDiv=document.createElement('div');
@@ -99,10 +97,23 @@ async function getData(url){
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
     safetyDetailDiv.appendChild(safetyDetailTextDiv);
     safetyDetailTag[0].appendChild(safetyDetailDiv);
-    }}
+    
+    };}
 }
 catch(error){
     console.error("there was a problem with fetch operation: ",error);
 }
 }
 getData(url)
+let links =["safetylibrary.html","privacyhub.html","parent.hub","transparency.html","safetynewshub.html","policyhub.hub"];
+setTimeout(()=>{
+    const clickedDiv=document.getElementsByClassName("safety-detail-content");
+    for(let i=0;i<6;i++)
+    {
+clickedDiv[i].addEventListener('click', function() {
+    window.location.replace(links[i]);
+
+    
+});
+}
+},500)

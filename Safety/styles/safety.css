@@ -224,50 +224,87 @@ a{
     border-radius:10px;
     padding-left: 5px;
   }
-  footer{
-    height: 80vh;
-    width: 100%;
-    background-color: black;
-    color: white;
-}
-#footer-top{
-    height: 60vh;
-    width: 100%;
-    color: white;
+  footer
+  {
+  background-color: #23272a;;
+  }
+  .center-nav a:hover {
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   
+  }
+ 
+  .footer-nav
+  {
     display: flex;
-}
-#footer-heading-1{
-    margin-top: 100px;
     margin-left: 100px;
-    font-family: ginto;
-    font-size: 30px;
-    color:  rgb(80, 80, 250);
-    width: 230px;
-}
-.footer-details{
-    margin-top: 100px;
-    display: flex;
-    width: 50px;
-    margin-left: 130px;
-    line-height: 30px;
-}
-#footer-line{
-    width: 82%;
-    align-items: center;
-    margin-left: 90px;
-    border: 1px solid  rgb(80, 80, 250);
-}
-#footer-bottom{
-    display: flex;
+    margin-right: 100px;
+  }
+  .socials
+  {
+    flex:1;
     justify-content: space-between;
-    margin: 30px 140px 0px 100px;
-}
-#footer-signup{
-    background-color:  rgb(80, 80, 250);
+    margin-top: 50px;
     color: white;
-    width: 80px;
-    height: 40px;
-    border-radius: 50px;
-    border: 0px;
-    cursor: pointer;
+  }
+  .column
+  {
+    margin-top: 50px;
+    text-decoration: none;
+    line-height:  30px;
+    margin-left: 20px;
+    color: #7289da;
+    margin-right: 50px;
+  }
+  .column a{
+    color: rgb(146, 139, 139);
+    text-decoration: none;
+  }
+ 
+ 
+ 
+  .footer-bar {
+    display: flex;
+    border-top: 1px solid #7289da;
+ 
+}
+#x1
+{
+    padding-top: 10px;
+    padding-right: 20px;
+}
+ 
+.footer-bar-image img
+{
+    height: 60px;
+    width: 124px;
+    flex:1;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.footer-bar-signup
+{
+ 
+    align-items: end;
+    background-color:#5865f2;
+    border-radius: 28px;
+    font-size: 12px;
+    padding: 10px 20px;
+    font-weight: 500;
+ 
+    height: 10px;
+    margin-left: 950px;
+    margin-top: 30px;
+    font-family: discordfont;
+    /* width: 10px; */
+}
+.footer-bar-signup a{
+    text-decoration:none;
+    color: #fff;
+ 
+}
+#flag
+{
+height: 30px;
+width: 50px;
 }
