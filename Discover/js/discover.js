@@ -33,12 +33,12 @@ async function getData1(urlImage,j){
             const responseData1=await response1.json();
             console.log(responseData1.photos[0].url);
             b=responseData1.photos[0].url;
-            let a=[];
-            for(let i=0;i<100;i++)
-            {
-                a[i]=responseData1.photos[i].url;
-            }       
-                return a;
+            // let a=[];
+            // for(let i=0;i<100;i++)
+            // {
+            //     a[i]=responseData1.photos[i].url;
+            // }       
+                return responseData1;
         }
         catch(error){
             console.error("there was a problem with fetch operation: ",error);
@@ -74,7 +74,7 @@ function getfeed(responseData,j)
                 let feedImageDiv=document.createElement('div');
                 let feedImage=document.createElement('img');
                 // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
-                feedImage.setAttribute("src",responseData1[i]);
+                feedImage.setAttribute("src",responseData1.photos[i].url);
                 feed.classList.add("feed1");
                 feedImageDiv.classList.add("feedImageDiv");
                 feedImage.classList.add("feed-image");
@@ -87,6 +87,10 @@ function getfeed(responseData,j)
                 feedContent.textContent=responseData[i].body;
                 feedRightSide.classList.add("feed-right-side");
                 feedHeading.classList.add("feed-heading");
+                feedHeading.addEventListener('click',()=>{
+                console.log("hello event")
+                openNewPage("dd");
+                ;})
                 feedContent.classList.add("feed-cnotent");
                 feedRightSide.appendChild(feedHeading);
                 feedRightSide.appendChild(feedContent);
@@ -101,7 +105,6 @@ function pageNumberColor(pageNo){
         document.getElementById(`page-${pageNo}`).classList.add("page-active");     
         prevPageNumber=pageNo;   
 }
-
 
 
 // $('div.category').click(function(){
@@ -192,5 +195,7 @@ function getfeedGaming(responseData,j)
             }
         })()
 }
-
-
+const openNewPage = (responseData1)=>{
+    console.log(responseData1)
+    window.location.href = `individualFeed.html?id=${responseData1}`
+}
