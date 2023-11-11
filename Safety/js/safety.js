@@ -16,20 +16,24 @@ async function getData(url){
     {
         if(i%2!=0)
         {
+    //text on the left side
     let safetyDetailDiv=document.createElement('div');
     safetyDetailDiv.classList.add("safety-detail-content");
     let safetyDetailTextDiv=document.createElement('div');
     safetyDetailTextDiv.classList.add("safety-detail-text");
+    //heading
     let safetyDetailHeadingDiv=document.createElement('h2');
     safetyDetailHeadingDiv.classList.add("safety-detail-heading");
     safetyDetailHeadingDiv.textContent= responseData.photos[i].title;
     safetyDetailTextDiv.appendChild(safetyDetailHeadingDiv);
+    //paragraph
     let safetyDetailParagraphDiv=document.createElement('div');
     safetyDetailParagraphDiv.classList.add("safety-detail-paragraph");
     let safetyDetailParaDiv=document.createElement('p');
     safetyDetailParaDiv.textContent=responseData.photos[i].description;
     safetyDetailParagraphDiv.appendChild(safetyDetailParaDiv);
     safetyDetailTextDiv.appendChild(safetyDetailParagraphDiv);
+    //explore more
     let safetyDetailExploreMoreDiv=document.createElement('div');
     safetyDetailExploreMoreDiv.classList.add("safety-detail-explore-more");
     let safetyDetailExploreMoreTextDiv=document.createElement('div');
@@ -46,7 +50,7 @@ async function getData(url){
     safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
     safetyDetailDiv.appendChild(safetyDetailTextDiv);
-    // image
+    // image on the right side
     let safetyDetailImageDiv=document.createElement('div');
     safetyDetailImageDiv.classList.add("safety-detail-image");
     var safetyDetailImage=document.createElement('img');
@@ -59,27 +63,29 @@ async function getData(url){
     {
     let safetyDetailDiv=document.createElement('div');
     safetyDetailDiv.classList.add("safety-detail-content");
-         // image
+    // image on the left side
     let safetyDetailImageDiv=document.createElement('div');
     safetyDetailImageDiv.classList.add("safety-detail-image");
     var safetyDetailImage=document.createElement('img');
     safetyDetailImage.setAttribute("src",responseData.photos[i].url);
     safetyDetailImageDiv.appendChild(safetyDetailImage);
     safetyDetailDiv.appendChild(safetyDetailImageDiv);
-    
-    
+    //text on the right side
     let safetyDetailTextDiv=document.createElement('div');
     safetyDetailTextDiv.classList.add("safety-detail-text");
+    //heading
     let safetyDetailHeadingDiv=document.createElement('h2');
     safetyDetailHeadingDiv.classList.add("safety-detail-heading");
     safetyDetailHeadingDiv.textContent= responseData.photos[i].title;
     safetyDetailTextDiv.appendChild(safetyDetailHeadingDiv);
+    //paragraph
     let safetyDetailParagraphDiv=document.createElement('div');
     safetyDetailParagraphDiv.classList.add("safety-detail-paragraph");
     let safetyDetailParaDiv=document.createElement('p');
     safetyDetailParaDiv.textContent=responseData.photos[i].description;
     safetyDetailParagraphDiv.appendChild(safetyDetailParaDiv);
     safetyDetailTextDiv.appendChild(safetyDetailParagraphDiv);
+    //explore more
     let safetyDetailExploreMoreDiv=document.createElement('div');
     safetyDetailExploreMoreDiv.classList.add("safety-detail-explore-more");
     let safetyDetailExploreMoreTextDiv=document.createElement('div');
