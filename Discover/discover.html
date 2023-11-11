@@ -9,11 +9,17 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
     />
+    <link href="/Discover/styles/discover.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
+    />
   </head>
   <body>
     <header>
       <nav>
         <div id="logo">
+          <img src="/Discover/images/discord-logo.png" id="logo-image" />
           <img src="/Discover/images/discord-logo.png" id="logo-image" />
         </div>
         <div id="nav-items">
@@ -36,6 +42,12 @@
         From gaming, to music, to learning, there's a place for you.
       </p>
     </div>
+    <div id="head-picture">
+      <div id="head-picture-heading">FIND YOUR COMMUNITY ON DISCORD</div>
+      <p id="head-pic-text">
+        From gaming, to music, to learning, there's a place for you.
+      </p>
+    </div>
     <br /><br />
     <div id="main-feed-div">
       <div id="search-bar-searchbutton">
@@ -49,11 +61,19 @@
         <button id="searchbutton">
           <img src="/Discover/images/search-icon.png" id="searh-button-image" />
         </button>
+        <button id="searchbutton">
+          <img src="/Discover/images/search-icon.png" id="searh-button-image" />
+        </button>
       </div>
       <br /><br /><br />
       <div id="main-categories-div">
         <div id="all-category-all" class="category">
+        <div id="all-category-all" class="category">
           <div class="left-side-category">
+            <img
+              src="/Discover/images/category-all.png"
+              class="category-image"
+            />
             <img
               src="/Discover/images/category-all.png"
               class="category-image"
@@ -63,7 +83,12 @@
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category-gaming" class="category">
+        <div id="all-category-gaming" class="category">
           <div class="left-side-category">
+            <img
+              src="/Discover/images/category-gaming.jpg"
+              class="category-image"
+            />
             <img
               src="/Discover/images/category-gaming.jpg"
               class="category-image"
@@ -73,7 +98,12 @@
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category-entertainment" class="category">
+        <div id="all-category-entertainment" class="category">
           <div class="left-side-category">
+            <img
+              src="/Discover/images/entertainment-icon.png"
+              class="category-image"
+            />
             <img
               src="/Discover/images/entertainment-icon.png"
               class="category-image"
@@ -83,7 +113,12 @@
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category-education" class="category">
+        <div id="all-category-education" class="category">
           <div class="left-side-category">
+            <img
+              src="/Discover/images/education-icon.png"
+              class="category-image"
+            />
             <img
               src="/Discover/images/education-icon.png"
               class="category-image"
@@ -93,7 +128,12 @@
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category-st" class="category">
+        <div id="all-category-st" class="category">
           <div class="left-side-category">
+            <img
+              src="/Discover/images/category-gaming.jpg"
+              class="category-image"
+            />
             <img
               src="/Discover/images/category-gaming.jpg"
               class="category-image"
@@ -103,7 +143,9 @@
           <div class="category-server-number">3390</div>
         </div>
         <div id="all-category-music" class="category">
+        <div id="all-category-music" class="category">
           <div class="left-side-category">
+            <img src="/Discover/images/music-icon.png" class="category-image" />
             <img src="/Discover/images/music-icon.png" class="category-image" />
             &nbsp;&nbsp;Music
           </div>
@@ -114,11 +156,16 @@
         <h2>30467 Results Found</h2>
         <!-- 
 
+        <!-- 
+
         <div class="feed1">
           <div class="feed-image-div">
             <img src="/Discover/images/feed-image.svg" class="feed-image" />
+            <img src="/Discover/images/feed-image.svg" class="feed-image" />
           </div>
           <div class="feed-right-side">
+            <h4 class="feed-heading">Leonardo Ai</h4>
+            <p class="feed-content">
             <h4 class="feed-heading">Leonardo Ai</h4>
             <p class="feed-content">
               Leonardo AI is a generative platform for content creation, create
@@ -127,6 +174,42 @@
             <p>129,2948 Online 7593722 Members</p>
           </div>
         </div>
+
+
+         -->
+      </div>
+    </div>
+    <div id="pages-number">
+      <a href="#head-pic-text">
+        <button class="page page-active" id="page-0" onclick="reloadDIV(0)">
+          1
+        </button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" id="page-1" onclick="reloadDIV(1)">2</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" id="page-2" onclick="reloadDIV(2)">3</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" id="page-3" onclick="reloadDIV(3)">4</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" id="page-4" onclick="reloadDIV(4)">5</button>
+      </a>
+      <a href="#head-pic-text">
+        <button class="page" id="page-5" onclick="reloadDIV(5)">6</button>
+      </a>
+    </div>
+    <div id="make-public">
+      <div id="inner-make-public">
+        <div>
+          <h1 id="make-public-heaing">
+            Have a server you want to add to Discovery?
+          </h1>
+        </div>
+        <br />
+        <button id="make-public-button">Make Your Community Public</button>
 
 
          -->
