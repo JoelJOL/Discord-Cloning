@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: absolute;
+    width: 100%;
+    background: transparent;
+}
+nav{
+    height: 80px;
+    display: flex;
+    width: 85%;
+    margin: 0px 100px 0px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo-image{
+    width: 100px;
+}
+#button-login{
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+#button-login:hover{
+    color: blue;
+}
+#nav-items{
+    width:60%;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: white;
+    /* color: white; */
+}
+#feed-head-div{
+    width: 100%;
+    height: 310px;
+    background-color: blue;
+}

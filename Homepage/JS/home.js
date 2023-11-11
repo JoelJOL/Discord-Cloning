@@ -58,21 +58,6 @@ async function getData(url){
             }
              
             }
-
-       
-
-
-
-
-
-
-
-
-
-
-
-           
-           
         }
         catch(error){
             console.error("there was a problem with fetch operation: ",error);
