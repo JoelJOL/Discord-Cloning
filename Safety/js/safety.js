@@ -1,7 +1,5 @@
 const url="https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=6"
  
- 
- 
 async function getData(url){
     try{
         const response = await fetch(url,{
@@ -18,20 +16,24 @@ async function getData(url){
     {
         if(i%2!=0)
         {
+    //text on the left side
     let safetyDetailDiv=document.createElement('div');
     safetyDetailDiv.classList.add("safety-detail-content");
     let safetyDetailTextDiv=document.createElement('div');
     safetyDetailTextDiv.classList.add("safety-detail-text");
+    //heading
     let safetyDetailHeadingDiv=document.createElement('h2');
     safetyDetailHeadingDiv.classList.add("safety-detail-heading");
     safetyDetailHeadingDiv.textContent= responseData.photos[i].title;
     safetyDetailTextDiv.appendChild(safetyDetailHeadingDiv);
+    //paragraph
     let safetyDetailParagraphDiv=document.createElement('div');
     safetyDetailParagraphDiv.classList.add("safety-detail-paragraph");
     let safetyDetailParaDiv=document.createElement('p');
     safetyDetailParaDiv.textContent=responseData.photos[i].description;
     safetyDetailParagraphDiv.appendChild(safetyDetailParaDiv);
     safetyDetailTextDiv.appendChild(safetyDetailParagraphDiv);
+    //explore more
     let safetyDetailExploreMoreDiv=document.createElement('div');
     safetyDetailExploreMoreDiv.classList.add("safety-detail-explore-more");
     let safetyDetailExploreMoreTextDiv=document.createElement('div');
@@ -48,40 +50,42 @@ async function getData(url){
     safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
     safetyDetailDiv.appendChild(safetyDetailTextDiv);
-    // image
+    // image on the right side
     let safetyDetailImageDiv=document.createElement('div');
     safetyDetailImageDiv.classList.add("safety-detail-image");
     var safetyDetailImage=document.createElement('img');
     safetyDetailImage.setAttribute("src",responseData.photos[i].url);
     safetyDetailImageDiv.appendChild(safetyDetailImage);
     safetyDetailDiv.appendChild(safetyDetailImageDiv);
-    safetyDetailTag[0].appendChild(safetyDetailDiv);
-    }
+    safetyDetailTag[0].appendChild(safetyDetailDiv);   
+}
     else
     {
     let safetyDetailDiv=document.createElement('div');
     safetyDetailDiv.classList.add("safety-detail-content");
-         // image
+    // image on the left side
     let safetyDetailImageDiv=document.createElement('div');
     safetyDetailImageDiv.classList.add("safety-detail-image");
     var safetyDetailImage=document.createElement('img');
     safetyDetailImage.setAttribute("src",responseData.photos[i].url);
     safetyDetailImageDiv.appendChild(safetyDetailImage);
     safetyDetailDiv.appendChild(safetyDetailImageDiv);
-    
-    
+    //text on the right side
     let safetyDetailTextDiv=document.createElement('div');
     safetyDetailTextDiv.classList.add("safety-detail-text");
+    //heading
     let safetyDetailHeadingDiv=document.createElement('h2');
     safetyDetailHeadingDiv.classList.add("safety-detail-heading");
     safetyDetailHeadingDiv.textContent= responseData.photos[i].title;
     safetyDetailTextDiv.appendChild(safetyDetailHeadingDiv);
+    //paragraph
     let safetyDetailParagraphDiv=document.createElement('div');
     safetyDetailParagraphDiv.classList.add("safety-detail-paragraph");
     let safetyDetailParaDiv=document.createElement('p');
     safetyDetailParaDiv.textContent=responseData.photos[i].description;
     safetyDetailParagraphDiv.appendChild(safetyDetailParaDiv);
     safetyDetailTextDiv.appendChild(safetyDetailParagraphDiv);
+    //explore more
     let safetyDetailExploreMoreDiv=document.createElement('div');
     safetyDetailExploreMoreDiv.classList.add("safety-detail-explore-more");
     let safetyDetailExploreMoreTextDiv=document.createElement('div');
@@ -99,10 +103,23 @@ async function getData(url){
     safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
     safetyDetailDiv.appendChild(safetyDetailTextDiv);
     safetyDetailTag[0].appendChild(safetyDetailDiv);
-    }}
+    
+    };}
 }
 catch(error){
     console.error("there was a problem with fetch operation: ",error);
 }
 }
 getData(url)
+let links =["safetylibrary.html","privacyhub.html","parenthub.html","transparency.html","safetynewshub.html","policyhub.html"];
+setTimeout(()=>{
+    const clickedDiv=document.getElementsByClassName("safety-detail-content");
+    for(let i=0;i<6;i++)
+    {
+clickedDiv[i].addEventListener('click', function() {
+    window.location.replace(links[i]);
+
+    
+});
+}
+},500)

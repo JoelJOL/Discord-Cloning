@@ -14,19 +14,19 @@
         </div>
         <div class="register-input-field">
           <label>EMAIL</label>
-          <input type="text" />
+          <input type="email" id="register-email" />
         </div>
         <div class="register-input-field">
           <label>DISPLAY NAME</label>
-          <input type="text" />
+          <input type="text" id="register-name" />
         </div>
         <div class="register-input-field">
           <label>USERNAME</label>
-          <input type="text" />
+          <input type="text" id="register-username" />
         </div>
         <div class="register-input-field">
           <label>PASSWORD</label>
-          <input type="password" />
+          <input type="password" id="register-password" />
         </div>
         <div class="register-input-field">
           <label>DATE OF BIRTH</label>
@@ -43,9 +43,12 @@
           </div>
         </div>
         <div class="register-input-button">
-          <button class="register-button">Register</button>
+          <button class="register-button" onclick="validateRegister()">
+            Register
+          </button>
           <label
-            ><input type="checkbox" />By registering you agree to Discord's
+            ><input type="checkbox" id="register-terms" />By registering you
+            agree to Discord's
             <button
               class="link-button"
               onclick="location.href=`https://discord.com/terms`"
