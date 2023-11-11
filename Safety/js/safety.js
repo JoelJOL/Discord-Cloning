@@ -105,7 +105,7 @@ catch(error){
 }
 }
 getData(url)
-let links =["safetylibrary.html","privacyhub.html","parenthub.html","transparency.html","safetynewshub.html","policyhubhub.html"];
+let links =["safetylibrary.html","privacyhub.html","parenthub.html","transparency.html","safetynewshub.html","policyhub.html"];
 setTimeout(()=>{
     const clickedDiv=document.getElementsByClassName("safety-detail-content");
     for(let i=0;i<6;i++)
