@@ -1,0 +1,101 @@
+body {
+  font-family: myFirstFont;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(/Discord-Cloning/Support/fonts/Ginto-Nord-700\ 2.woff);
+}
+.header {
+  display: flex;
+  width: 1570px;
+  justify-content: space-between;
+  position: relative;
+}
+.header-icon {
+  flex: 1;
+}
+#header-icon-image {
+  width: 275px;
+  height: 100px;
+}
+.header-navigationBar {
+  flex: 1;
+  flex-direction: right;
+  text-align: center;
+  overflow: hidden;
+}
+.header-navigationBar a {
+  align-items: right;
+  text-decoration: none;
+  color: #5865f2;
+  font-size: 15px;
+  padding: 30px;
+}
+
+#header-navigationBar-language {
+  appearance: none;
+  border: none;
+  font-family: myFirstFont;
+  color: #5865f2;
+  font-size: 15px;
+  padding: 30px;
+}
+.header-navigationBar a:hover {
+  text-decoration: underline;
+}
+.top {
+  background-image: url(../images/b7e9dce75f9edb23504e13b4699e208f204e5015.png);
+  background-size: 100% 450px;
+  width: 1630px;
+  height: 450px;
+}
+.top-content {
+  padding-top: 90px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 30px;
+}
+#top-content-title {
+  color: #ffffff;
+}
+.top-content-searchBar {
+  background-color: white;
+}
+#top-content-searchbar input {
+  border: none;
+  height: 40px;
+}
+
+.divRow {
+  display: flex;
+  margin-inline: 20%;
+}
+.card {
+  width: 65%;
+  margin: 2%;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 2% 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+}
+
+section {
+  text-align: center;
+  font-family: myFirstFont;
+}
+#welcome-title {
+  font-size: 40px;
+}
+#welcome-beginnerGuide {
+  font-size: 20px;
+  line-height: 40px;
+}
+#welcome-beginnerGuide-link {
+  text-decoration: none;
+  color: #5865f2;
+  font-size: 20px;
+}
+#welcome-beginnerGuide-link:hover {
+  text-decoration: underline;
+}
