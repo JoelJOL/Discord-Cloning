@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/register.css" />
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-input">
+        <div class="register-input-heading">
+          <h3>Create an account</h3>
+        </div>
+        <div class="register-input-field">
+          <label>EMAIL</label>
+          <input type="text" />
+        </div>
+        <div class="register-input-field">
+          <label>DISPLAY NAME</label>
+          <input type="text" />
+        </div>
+        <div class="register-input-field">
+          <label>USERNAME</label>
+          <input type="text" />
+        </div>
+        <div class="register-input-field">
+          <label>PASSWORD</label>
+          <input type="password" />
+        </div>
+        <div class="register-input-field">
+          <label>DATE OF BIRTH</label>
+          <div class="birthdate">
+            <select name="month" id="month-list">
+              <option value="" disabled selected>Month</option>
+            </select>
+            <select name="date" id="date-list">
+              <option value="" disabled selected>Date</option>
+            </select>
+            <select name="year" id="year-list">
+              <option value="" disabled selected>Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="register-input-button">
+          <button class="register-button">Register</button>
+          <label
+            ><input type="checkbox" />By registering you agree to Discord's
+            <button
+              class="link-button"
+              onclick="location.href=`https://discord.com/terms`"
+            >
+              Terms of Service
+            </button>
+            and
+            <button
+              class="link-button"
+              onclick="location.href=`https://discord.com/privacy`"
+            >
+              Privacy Policy
+            </button>
+          </label>
+        </div>
+        <div class="register-input-login">
+          <button class="link-button" onclick="location.href='login.html'">
+            Already have an account?
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/register.js"></script>
+</html>
