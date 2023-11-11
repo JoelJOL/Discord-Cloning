@@ -53,10 +53,6 @@ setTimeout(()=>{
 let table = new DataTable("#myTable");
       $(document).ready(function () {
         $("#myTable").DataTable({
-          lengthMenu: [
-            [5, 10, 50, 100, -1],
-            [5, 10, 50, 100, "All"],
-          ],
         });
       });
-    },1000)
+    },100)
