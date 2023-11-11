@@ -43,68 +43,61 @@ body {
 .header-navigationBar a:hover {
   text-decoration: underline;
 }
-.top {
-  background-image: url(../images/b7e9dce75f9edb23504e13b4699e208f204e5015.png);
-  background-size: 100% 450px;
-  width: 1630px;
-  height: 450px;
+.timeline-Search {
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  display: flex;
+  justify-content: space-between;
 }
-.top-content {
-  padding-top: 90px;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 30px;
+.timeline {
+  flex: 1;
 }
-#top-content-title {
-  color: #ffffff;
+.timeline-list {
+  list-style: none;
+  max-width: 450px;
+  display: flex;
 }
-.top-content-searchBar {
-  background-color: white;
+.timeline ol li a {
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #5865f2;
+  margin: 0.4px;
 }
-#top-content-searchbar input {
-  border: none;
-  height: 40px;
-  width: 900px;
+.timeline ol li a:hover {
+  text-decoration: underline;
+  margin: 0.4px;
+}
+.timeline ol .secondary-element::before {
+  content: ">";
+  color: #5865f2;
+}
+.timeline-searchBar {
+  flex: 1;
+  text-align: right;
+  margin-top: 10px;
+  width: 500px;
+  height: 50px;
+}
+#timeline-searchbar input {
+  width: 500px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
   font-size: 25px;
 }
-
-.divRow {
-  display: flex;
-  margin-inline: 20%;
+.submit-request-title {
+  line-height: 50px;
 }
-.card {
-  width: 65%;
-  margin: 2%;
-  text-align: center;
-  background-color: #f5f5f5;
-  padding: 2% 3%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 15px;
-}
-
-section {
-  text-align: center;
-  font-family: myFirstFont;
-}
-#welcome-title {
-  font-size: 40px;
-}
-#welcome-beginnerGuide {
+#submit-request-list {
+  width: 400px;
+  height: 30px;
   font-size: 20px;
-  line-height: 40px;
-}
-#welcome-beginnerGuide-link {
-  text-decoration: none;
-  color: #5865f2;
-  font-size: 20px;
-}
-#welcome-beginnerGuide-link:hover {
-  text-decoration: underline;
 }
 .more-links {
   width: 100%;
   height: 200px;
-  position: relative;
+  position: fixed;
   left: 0;
   bottom: 0;
   background-color: rgb(0, 0, 0);
