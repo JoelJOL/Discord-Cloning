@@ -1,5 +1,5 @@
 const url="https://jsonplaceholder.typicode.com/posts";
-const urlImage="https://api.slingacademy.com/v1/sample-data/photos?offset=5&limit=100";
+const urlImage="https://api.slingacademy.com/v1/sample-data/photos?offset=0&limit=100";
 const urlGaming="https://picsum.photos/v2/list?page=2&limit=100";
 let j=0;
 let prevPageNumber=0;
@@ -89,7 +89,7 @@ function getfeed(responseData,j)
                 feedHeading.classList.add("feed-heading");
                 feedHeading.addEventListener('click',()=>{
                 console.log("hello event")
-                openNewPage("dd");
+                openNewPage(responseData1.photos[i].id);
                 ;})
                 feedContent.classList.add("feed-cnotent");
                 feedRightSide.appendChild(feedHeading);
