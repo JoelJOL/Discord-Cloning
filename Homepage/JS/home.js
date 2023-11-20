@@ -56,6 +56,7 @@ async function getData(url1){
                 rowtext.appendChild(rowtextpara);
                 row.appendChild(rowimage);
                 rowimage.appendChild(dynamicImage);
+                
             }
              
             }
