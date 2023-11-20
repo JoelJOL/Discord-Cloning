@@ -3,6 +3,8 @@ const url1="https://mocki.io/v1/89d8db87-1e7d-4756-a1d7-908747f7049d"
 
 
 
+
+
 async function getData(url1){
     try{
         const response = await fetch(url1,{

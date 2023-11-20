@@ -6,14 +6,17 @@
 
 
 
+
+
+
+
+
 @font-face {
     font-family: "discordfont";
     src:url(/Homepage/styles/Ginto-Nord-700.woff) format('woff');
   }
 
-body {
-    
-}
+
 
 .loader
 {
@@ -424,6 +427,39 @@ background-color: #23272a;;
     color: rgb(146, 139, 139);
     text-decoration: none;
   }
+
+.bottom
+{
+    margin-top: 90px;
+    background:rgb(247, 245, 245)
+
+}
+
+.endcontent
+{
+    padding-top: 100px;
+    background:rgb(247, 245, 245)
+}
+
+.endcontent h1
+{
+font-family: discordfont;
+text-align: center;
+}
+
+.endcontent p
+{
+    padding: 30px;
+text-align: center;
+font-size: 20px;
+    line-height: 32px;
+    color: rgb(100, 100, 100);
+}
+#endcontentimage
+{
+
+margin-left: 100px;
+}
 
 
 
