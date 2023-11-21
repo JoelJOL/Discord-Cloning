@@ -59,7 +59,7 @@ a{
 }
 @font-face {
     font-family: "discordfont";
-    src: url(/Discord-Cloning/Safety/styles/Ginto-Nord-700.woff) format('woff');
+    src: url(/Safety/styles/Ginto-Nord-700.woff) format('woff');
   }
 .header-heading{
     color: white;
@@ -114,7 +114,7 @@ a{
 .button-font{
     font-size: 17px;
     font-family: discordfont;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     align-items: center;
 }
