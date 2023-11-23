@@ -50,16 +50,31 @@ function forgotPassword() {
 function validateLogin() {
   let usernameField = document.getElementById("login-username");
   let passwordField = document.getElementById("login-password");
+  let registeredUsersData = sessionStorage.getItem("registeredUsers");
   if (usernameField.value === "") {
     alert("Username cannot be empty");
   } else if (passwordField.value.length < 8) {
     alert("Password must be minimum 8 characters");
+  } else if (registeredUsersData) {
+    let registeredUsers = JSON.parse(registeredUsersData);
+    if (registeredUsers.length > 0) {
+      registeredUsers.forEach((registeredUser) => {
+        if (
+          registeredUser.username === usernameField.value &&
+          registeredUser.password === passwordField.value
+        ) {
+          sessionStorage.setItem("loggedInUser", JSON.stringify(registeredUser));
+          window.location.href = "/Homepage/home.html";
+        }
+      });
+    }
   } else {
     let userId = isValidLogin(usernameField.value, passwordField.value);
     if (userId === -1) {
       alert("User does not exist");
     } else {
-      alert(`Welcome ${users[userId].firstName}`);
+      sessionStorage.setItem("loggedInUser", JSON.stringify(users[userId]));
+      window.location.href = "/Homepage/home.html";
     }
   }
 }
