@@ -7,64 +7,82 @@
     <link rel="stylesheet" href="styles/register.css" />
   </head>
   <body>
+    <!-- Registration container -->
     <div class="register-container">
       <div class="register-input">
         <div class="register-input-heading">
           <h3>Create an account</h3>
         </div>
-        <div class="register-input-field">
-          <label>EMAIL</label>
-          <input type="email" id="register-email" />
-        </div>
-        <div class="register-input-field">
-          <label>DISPLAY NAME</label>
-          <input type="text" id="register-name" />
-        </div>
-        <div class="register-input-field">
-          <label>USERNAME</label>
-          <input type="text" id="register-username" />
-        </div>
-        <div class="register-input-field">
-          <label>PASSWORD</label>
-          <input type="password" id="register-password" />
-        </div>
-        <div class="register-input-field">
-          <label>DATE OF BIRTH</label>
-          <div class="birthdate">
-            <select name="month" id="month-list">
-              <option value="" disabled selected>Month</option>
-            </select>
-            <select name="date" id="date-list">
-              <option value="" disabled selected>Date</option>
-            </select>
-            <select name="year" id="year-list">
-              <option value="" disabled selected>Year</option>
-            </select>
+        <!-- Registration input form -->
+        <form
+          id="registration-form"
+          onsubmit="validateRegister(); return false;"
+        >
+          <div class="register-input-field">
+            <!-- Email input field -->
+            <label for="register-email">EMAIL</label>
+            <input type="email" id="register-email" required />
           </div>
-        </div>
-        <div class="register-input-button">
-          <button class="register-button" onclick="validateRegister()">
-            Register
-          </button>
-          <label
-            ><input type="checkbox" id="register-terms" />By registering you
-            agree to Discord's
-            <button
-              class="link-button"
-              onclick="location.href=`https://discord.com/terms`"
-            >
-              Terms of Service
-            </button>
-            and
-            <button
-              class="link-button"
-              onclick="location.href=`https://discord.com/privacy`"
-            >
-              Privacy Policy
-            </button>
-          </label>
-        </div>
+
+          <div class="register-input-field">
+            <!-- Display name input field -->
+            <label for="register-name">DISPLAY NAME</label>
+            <input type="text" id="register-name" required />
+          </div>
+
+          <div class="register-input-field">
+            <!-- Username input field -->
+            <label for="register-username">USERNAME</label>
+            <input type="text" id="register-username" required />
+          </div>
+
+          <div class="register-input-field">
+            <!-- Password input field with pattern requirement of 8 characters minimum -->
+            <label for="register-password">PASSWORD</label>
+            <input
+              type="password"
+              id="register-password"
+              pattern=".{8,}"
+              title="Eight or more characters"
+              required
+            />
+          </div>
+
+          <div class="register-input-field">
+            <!-- Date of Birth input fields -->
+            <label for="date-list">DATE OF BIRTH</label>
+            <div class="birthdate">
+              <select name="month" id="month-list" required>
+                <option value="" disabled selected>Month</option>
+              </select>
+              <select name="date" id="date-list" required>
+                <option value="" disabled selected>Date</option>
+              </select>
+              <select name="year" id="year-list" required>
+                <option value="" disabled selected>Year</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="register-input-button">
+            <!-- Register button -->
+            <button type="submit" class="register-button">Register</button>
+            <!--  Terms and policy checkbox -->
+            <label>
+              <input type="checkbox" id="register-terms" required />
+              By registering you agree to Discord's
+              <a href="https://discord.com/terms" class="link-button"
+                >Terms of Service</a
+              >
+              and
+              <a href="https://discord.com/privacy" class="link-button"
+                >Privacy Policy</a
+              >
+            </label>
+          </div>
+        </form>
         <div class="register-input-login">
+          <!-- Redirect to login page -->
           <button class="link-button" onclick="location.href='login.html'">
             Already have an account?
           </button>

@@ -1,549 +1,475 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-
-
-
-
-
-
-
-
 
 @font-face {
-    font-family: "discordfont";
-    src:url(/Homepage/styles/Ginto-Nord-700.woff) format('woff');
-  }
-
-
-
-.loader
-{
-    position: fixed;
-    z-index:99;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000000;
-
+  font-family: "discordfont";
+  src: url(/Homepage/styles/Ginto-Nord-700.woff) format("woff");
 }
 
-
-.loader img
-{
-    width: 200px;;
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
 }
 
-.loader.hidden
-{
-animation: fadeOut 2s;
-animation-fill-mode:forwards ;
+.loader img {
+  width: 200px;
 }
 
+.loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
+}
 
-@keyframes fadeOut
-{
-  100%
-  {
+@keyframes fadeOut {
+  100% {
     opacity: 0;
     visibility: hidden;
   }
 }
 
 body {
-    
 }
 
-.loader
-{
-    position: fixed;
-    z-index:99;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000000;
-
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
 }
 
-
-.loader img
-{
-    width: 200px;;
+.loader img {
+  width: 200px;
 }
 
-.loader.hidden
-{
-animation: fadeOut 2s;
-animation-fill-mode:forwards ;
+.loader.hidden {
+  animation: fadeOut 2s;
+  animation-fill-mode: forwards;
 }
 
-
-@keyframes fadeOut
-{
-  100%
-  {
+@keyframes fadeOut {
+  100% {
     opacity: 0;
     visibility: hidden;
   }
 }
 
-
-
-.usersonline
-{
-
-position: relative;
-right: 500px;
-bottom: 150px;
-color: rgb(94, 92, 92);
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+.usersonline {
+  position: relative;
+  right: 500px;
+  bottom: 150px;
+  color: rgb(94, 92, 92);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-
-.leftpic
-{
-    
+.leftpic {
   position: absolute;
   bottom: -28px;
   left: 400px;
-   
 }
 
 .top-container {
-    height: 650px;
-    background-image:linear-gradient(rgba(42, 94, 232, 1) 39%, rgba(110, 148, 254, 1) 100%);    
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: -10;
-    
-} 
+  height: 650px;
+  background-image: linear-gradient(
+    rgba(42, 94, 232, 1) 39%,
+    rgba(110, 148, 254, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: -10;
+}
 
 .background {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-header{
-    position: absolute;
-    width: 100%;
-    background: transparent;
+header {
+  position: absolute;
+  width: 100%;
+  background: transparent;
 }
-nav{
-    height: 80px;
-    display: flex;
-    width: 85%;
-    margin: 0px 100px 0px 100px;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  height: 80px;
+  display: flex;
+  width: 85%;
+  margin: 0px 100px 0px 100px;
+  justify-content: space-between;
+  align-items: center;
 }
-#logo-image{
-    width: 100px;
+#logo-image {
+  width: 100px;
 }
-#button-login{
-    border-radius: 20px;
-    width: 70px;
-    height: 35px;
-    border: 0px;
-    cursor: pointer;
+#button-login {
+  border-radius: 20px;
+  width: 70px;
+  height: 35px;
+  border: 0px;
+  cursor: pointer;
 }
-#button-login:hover{
-    color: blue;
+#button-login:hover {
+  color: blue;
 }
-#nav-items{
-    width:60%;
-    display: flex;
-    justify-content: space-between;
+#nav-items {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
 }
-a{
-    text-decoration: none;
-    color: white;
-    /* color: white; */
+a {
+  text-decoration: none;
+  color: white;
+  /* color: white; */
+}
+#profile-icon-div {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50px;
+}
+#profile-icon-div img {
+  height: 50px;
+  width: 50px;
 }
 
 .top-container .center-box {
-    z-index: 10;
-    padding: 10px 10px;
-    max-width: 780px;
-    display: flex;
-    margin-left: -100px;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    text-align: center;
-    margin-top: 200px;
-    
+  z-index: 10;
+  padding: 10px 10px;
+  max-width: 780px;
+  display: flex;
+  margin-left: -100px;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  margin-top: 200px;
 }
 
-.top-container .center-box>h1 {
-    color: #fff;
-    font-size: 3rem;
-    padding: 40px auto;
-    margin-top: -800px;
-    font-family: discordfont;
+.top-container .center-box > h1 {
+  color: #fff;
+  font-size: 3rem;
+  padding: 40px auto;
+  margin-top: -800px;
+  font-family: discordfont;
 }
 
-.top-container .center-box>p {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 40px auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 1000px;
-    line-height: 40px;
+.top-container .center-box > p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 40px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 1000px;
+  line-height: 40px;
 }
 
-.top-container .center-box>.nav-buttons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: larger;
-    /* font-family: discordfont; */
-    
+.top-container .center-box > .nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: larger;
+  /* font-family: discordfont; */
 }
-#opendis
-{
-    /* font-family: discordfont; */
-    font-size: medium;
-    width: 350px;
-    height: 50px;
-    cursor: pointer;
+#opendis {
+  /* font-family: discordfont; */
+  font-size: medium;
+  width: 350px;
+  height: 50px;
+  cursor: pointer;
 }
-
 
 .top-container .center-box .nav-buttons a {
-    display: flex;
-    flex-direction: row;
-    margin: 0 8px;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-radius: 28px;
-    font-size: 20px;
-    padding: 12px 28px;
-    font-weight: 500;
-    text-decoration: none;
-    width: auto;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: row;
+  margin: 0 8px;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 12px 28px;
+  font-weight: 500;
+  text-decoration: none;
+  width: auto;
+  justify-content: center;
 }
-.top-container .center-box .nav-buttons a:hover{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.top-container .center-box .nav-buttons a:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .top-container .center-box .nav-buttons button {
-    margin-right: 8px;
-    color: white;
-    background-color: #000000;
-    border-radius: 28px;
-    font-size: 20px;
-    padding: 12px 28px;
-    font-weight: 500;
-    border: none;
+  margin-right: 8px;
+  color: white;
+  background-color: #000000;
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 12px 28px;
+  font-weight: 500;
+  border: none;
 }
-.top-container .center-box .nav-buttons button:hover
-{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.top-container .center-box .nav-buttons button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.container  {
-    padding-top: 100px;
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.container {
+  padding-top: 100px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .container-img {
-    /* max-width: 678px;
-    max-height: 440px; */   
-   
+  /* max-width: 678px;
+    max-height: 440px; */
 }
-.home-feed-images{
-    max-width: 522px;
-    height: 290px;
-    margin-left: 40px;
-    margin-right: 40px;
-  
+.home-feed-images {
+  max-width: 522px;
+  height: 290px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.container .description
- {
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    max-width: 440px;
-    height: 100%;
+.container .description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 440px;
+  height: 100%;
 }
 
 .description h2 {
-    font-size: 31px;
-    font-weight: 700;
-    font-family: discordfont;
-    width: 457px;
-
+  font-size: 31px;
+  font-weight: 700;
+  font-family: discordfont;
+  width: 457px;
 }
 
 .description p {
-    padding-top: 20px;
-    font-size: 20px;
-    line-height: 32px;
-    color: rgb(100, 100, 100);
-    width: 457px;
+  padding-top: 20px;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgb(100, 100, 100);
+  width: 457px;
 }
 
-.lastcontainer
-{
-    margin-top: 200px;
-    text-align:center;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background:rgb(247, 245, 245);
-    padding-bottom: 100px;
-    padding-top: 50px;
- 
-   
+.lastcontainer {
+  margin-top: 200px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(247, 245, 245);
+  padding-bottom: 100px;
+  padding-top: 50px;
 }
 
-.lastcontainer a
-{
-    
-    
-    color: rgb(0, 0, 0);
-    background-color: #5865f2;
-    border-radius: 28px;
-    font-size: 20px;
-    padding: 19px 28px;
-    font-weight: 500;
-    width: 250px;
-    text-decoration: none;
-    justify-content: center; 
-    margin-top: 20px;
-    
-  
+.lastcontainer a {
+  color: rgb(0, 0, 0);
+  background-color: #5865f2;
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 19px 28px;
+  font-weight: 500;
+  width: 250px;
+  text-decoration: none;
+  justify-content: center;
+  margin-top: 20px;
 }
-.lastcontainer h1
-{
-    font-family: discordfont;
+.lastcontainer h1 {
+  font-family: discordfont;
 }
 
-
-.bottom
-{
-    margin-top: 90px;
-    background:rgb(247, 245, 245)
- 
-}
- 
-.endcontent
-{
-    padding-top: 100px;
-    background:rgb(247, 245, 245)
-}
- 
-.endcontent h1
-{
-font-family: discordfont;
-text-align: center;
-}
- 
-.endcontent p
-{
-    padding: 30px;
-text-align: center;
-font-size: 20px;
-    line-height: 32px;
-    color: rgb(100, 100, 100);
-}
-#endcontentimage
-{
- 
-margin-left: 100px;
+.bottom {
+  margin-top: 90px;
+  background: rgb(247, 245, 245);
 }
 
-
-
-
-
-footer
-{
-background-color: #23272a;;
+.endcontent {
+  padding-top: 100px;
+  background: rgb(247, 245, 245);
 }
 
+.endcontent h1 {
+  font-family: discordfont;
+  text-align: center;
+}
+
+.endcontent p {
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgb(100, 100, 100);
+}
+#endcontentimage {
+  margin-left: 100px;
+}
+
+footer {
+  background-color: #23272a;
+}
 
 .center-nav a:hover {
-    text-decoration: underline;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer-nav {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.socials {
+  flex: 1;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: white;
+}
+.column {
+  margin-top: 50px;
+  text-decoration: none;
+  line-height: 30px;
+  margin-left: 20px;
+  color: #7289da;
+  margin-right: 50px;
+}
+.column a {
+  color: rgb(146, 139, 139);
+  text-decoration: none;
+}
+
+.footer-bar {
+  display: flex;
+  border-top: 1px solid #7289da;
+}
+
+#x1 {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.footer-bar-image img {
+  height: 40px;
+  width: 124px;
+  flex: 1;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.footer-bar-signup {
+  align-items: end;
+  background-color: #5865f2;
+  border-radius: 28px;
+  font-size: 13px;
+  padding: 10px 20px;
+  font-weight: 500;
+
+  height: 10px;
+  margin-left: 950px;
+  margin-top: 30px;
+  font-family: discordfont;
+  /* width: 10px; */
+}
+.footer-bar-signup a {
+  text-decoration: none;
+  color: #fff;
+}
+#flag {
+  height: 30px;
+  width: 50px;
+}
+
+.snow,
+.snow2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/Homepage/images/snow.png);
+}
+
+.snow {
+  background-size: 70em;
+  animation: snowfall 30s linear infinite;
+}
+.snow2 {
+  background-size: 50em;
+  animation: snowfall 30s linear infinite;
+  opacity: 0.5;
+}
+@keyframes snowfall {
+  100% {
+    background-position: 70em 70em;
   }
+}
 
-  .footer-nav
-  {
-    display: flex;
-    margin-left: 100px;
-    margin-right: 100px;
+@keyframes snowfall2 {
+  100% {
+    background-position: 50em 0;
   }
-  .socials
-  {
-    flex:1;
-    justify-content: space-between;
-    margin-top: 50px;
-    color: white;
-  }
-  .column
-  {
-    margin-top: 50px;
-    text-decoration: none;
-    line-height:  30px;
-    margin-left: 20px;
-    color: #7289da;
-    margin-right: 50px;
-  }
-  .column a{
-    color: rgb(146, 139, 139);
-    text-decoration: none;
-  }
-
-
-
-  .footer-bar {
-    display: flex;
-    border-top: 1px solid #7289da;
-
 }
-
-#x1
-{
-    padding-top: 10px;
-    padding-right: 20px;
-}
-
-.footer-bar-image img
-{
-    height: 40px;
-    width: 124px;
-    flex:1;
-    margin-left: 40px;
-    margin-top: 30px;
-}
-
-.footer-bar-signup
-{
-  
-    align-items: end;
-    background-color:#5865f2;
-    border-radius: 28px;
-    font-size: 13px;
-    padding: 10px 20px;
-    font-weight: 500;
-
-    height: 10px;
-    margin-left: 950px;
-    margin-top: 30px;
-    font-family: discordfont;
-    /* width: 10px; */
-}
-.footer-bar-signup a{
-    text-decoration:none;
-    color: #fff;
-
-}
-#flag
-{
-height: 30px;
-width: 50px;
-}
-
-.snow, .snow2
-{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: url(/Homepage/images/snow.png);
-}
-
-.snow{
-   background-size: 70em; 
-   animation:
-      snowfall 30s linear infinite;
-}
-.snow2
-{
-    background-size: 50em;
-     animation: 
-               snowfall 30s linear infinite;
-     opacity: 0.5;          
-}
-@keyframes snowfall
-{
-    100%
-    {
-        background-position:70em 70em;
-    }
-}
-  
-@keyframes snowfall2
-{
-    100%
-    {
-        background-position:50em 0;
-
-    }
-}
-
 
 /* //////////////////////////////////////////////////////// */
 
-button, input {
-    padding: 10px 20px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
+button,
+input {
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
 /* 
 /////////////////////////////////////////////// */
 
 .sparkle {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid yellow;
-    opacity: 0;
-    pointer-events: none;
-    animation: sparkleAnimation 1s linear infinite;
-  }
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid yellow;
+  opacity: 0;
+  pointer-events: none;
+  animation: sparkleAnimation 1s linear infinite;
+}
 
-  @keyframes sparkleAnimation {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100px) scale(0.5);
-      opacity: 0;
-    }
+@keyframes sparkleAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+}

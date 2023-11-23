@@ -15,20 +15,19 @@
   font-style: normal;
 }
 
-
-header{
-    position: relative;
-    width: 100%;
-    background: transparent;
+header {
+  position: relative;
+  width: 100%;
+  background: transparent;
 }
-nav{
-    position: absolute;
-    height: 80px;
-    display: flex;
-    width: 85%;
-    margin: 0px 100px 0px 100px;
-    justify-content: space-between;
-    align-items: center;
+nav {
+  position: absolute;
+  height: 80px;
+  display: flex;
+  width: 85%;
+  margin: 0px 100px 0px 100px;
+  justify-content: space-between;
+  align-items: center;
 }
 #logo-image {
   width: 100px;
@@ -163,27 +162,27 @@ input[type="text"]:focus {
   top: 91%;
   width: 55%;
 }
-.feed1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+.feed1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
-.feedImageDiv{
-    width: 200px;
-    height: 200px;
-    align-items: center;
-    background-color: rgb(237, 237, 237);
-    display: flex;
-    justify-content: center;
+.feedImageDiv {
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  background-color: rgb(237, 237, 237);
+  display: flex;
+  justify-content: center;
 }
-.feed-image{
-    width: 170px;
-    background-size: contain;
+.feed-image {
+  width: 170px;
+  background-size: contain;
 }
-.feed-heading{
-    padding:10px 20px 20px 0px;
-    cursor: pointer;
+.feed-heading {
+  padding: 10px 20px 20px 0px;
+  cursor: pointer;
 }
 .feed-content {
   padding: 10px 20px 20px 0px;
@@ -226,9 +225,9 @@ input[type="text"]:focus {
   width: 650px;
   height: 100px;
 }
-#pages-number{
-    margin-top: 220%;
-    margin-left: 37%;
+#pages-number {
+  margin-top: 220%;
+  margin-left: 37%;
 }
 .page {
   width: 40px;
