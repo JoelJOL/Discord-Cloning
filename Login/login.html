@@ -7,37 +7,59 @@
     <link rel="stylesheet" href="styles/login.css" />
   </head>
   <body>
+    <!-- Login container -->
     <div class="login-container">
-      <div class="login-input">
+      <!-- Login input form -->
+      <form
+        id="login-form"
+        onsubmit="validateLogin(); return false;"
+        class="login-input"
+      >
         <div class="login-input-heading">
           <h3>Welcome back!</h3>
           <p>We're so excited to see you again</p>
         </div>
+
         <div class="login-input-field">
-          <label>USERNAME</label>
-          <input type="text" id="login-username" />
-          <button class="link-button" onclick="forgotUsername()">
+          <!-- Username input field -->
+          <label for="login-username">USERNAME</label>
+          <input type="text" id="login-username" required />
+          <!-- Forgot username link -->
+          <button type="button" class="link-button" onclick="forgotUsername()">
             Forgot your username?
           </button>
         </div>
+
         <div class="login-input-field">
-          <label>PASSWORD</label>
-          <input type="password" id="login-password" />
-          <button class="link-button" onclick="forgotPassword()">
-            Forgot your passsword?
+          <!-- Password input field -->
+          <label for="login-password">PASSWORD</label>
+          <input type="password" id="login-password" required />
+          <!-- Forgot password link -->
+          <button type="button" class="link-button" onclick="forgotPassword()">
+            Forgot your password?
           </button>
         </div>
+
         <div class="login-input-button">
-          <button class="login-button" onclick="validateLogin()">Log In</button>
+          <!-- Login button -->
+          <button type="submit" class="login-button">Log In</button>
+          <!-- Redirect to registration page -->
           <div class="login-input-register">
             <span>Need an account?</span>
-            <button class="link-button" onclick="location.href='register.html'">
+            <button
+              type="button"
+              class="link-button"
+              onclick="location.href='register.html'"
+            >
               Register
             </button>
           </div>
         </div>
-      </div>
+      </form>
+
+      <!-- QR Code login section -->
       <div class="login-input">
+        <!-- QR Code image -->
         <div class="login-input-qr">
           <img
             id="qrCode"
@@ -45,6 +67,7 @@
             alt="Login QR"
           />
         </div>
+        <!-- QR Code login description -->
         <div class="login-input-desc">
           <h3>Log In with QR Code</h3>
           <p>

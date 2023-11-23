@@ -109,26 +109,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    let loggedInUserData = sessionStorage.getItem("loggedInUser");
-    if (loggedInUserData) {
-      let loggedInUser = JSON.parse(loggedInUserData);
-      let loginButtonDiv = document.getElementById("button-login-div");
-      if (loginButtonDiv) {
-        loginButtonDiv.remove();
-      }
+document.addEventListener("DOMContentLoaded", function () {
+  let loggedInUserData = sessionStorage.getItem("loggedInUser");        // Retrieve logged-in user data from session storage
+  // Check if there is a logged-in user
+  if (loggedInUserData) {
+    let loggedInUser = JSON.parse(loggedInUserData);                    // Parse the logged-in user data
+    let loginButtonDiv = document.getElementById("button-login-div");
+    if (loginButtonDiv) {
+      loginButtonDiv.remove();                                          // Check if the login button div exists, and if so, remove it
       let navBar = document.getElementById("navbar");
+       // Create a div for the profile icon
       let profileIconDiv = document.createElement("div");
       profileIconDiv.setAttribute("id", "profile-icon-div");
+      // Check if the profile icon div exists
       if (profileIconDiv) {
+        // Create a link for the profile redirect
         let profileRedirect = document.createElement("a");
         profileRedirect.href = "/Login/login.html";
-        let profileIcon = document.createElement("img");
+        // Create an image element for the profile icon
+        let profileIcon = document.createElement("img");                
         profileIcon.src = loggedInUser.image;
         profileIcon.alt = "Profile Icon";
-        profileRedirect.appendChild(profileIcon);
-        profileIconDiv.appendChild(profileRedirect);
+        profileRedirect.appendChild(profileIcon);                       // Append the profile icon to the profile redirect link
+        profileIconDiv.appendChild(profileRedirect);                    // Append the profile redirect link to the profile icon div
       }
       navBar.appendChild(profileIconDiv);
     }
-  });
+  }
+});
