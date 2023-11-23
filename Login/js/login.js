@@ -5,7 +5,7 @@ function changeQr() {
     "qrCode"
   ).src = `https://quickchart.io/qr?text=Discord-${randomIndex}`;
 }
-setInterval(changeQr, 5000);
+setInterval(changeQr, 10000);
 
 // Fetch user data from a dummy JSON API and store it in the 'users' array
 const getUserData = fetch(
