@@ -41,11 +41,3 @@ async function func() {
   }
 }
 func();
-//    <div class="highlight block-link">
-//<h2>I am an example header</h2>
-//<p>
-//  <a href="pageone" class="block-link__overlay-link">This entire box</a>
-//  links somewhere, thanks to faux block links. I am some example text with
-//  a <a href="pagetwo">custom link</a> that sits within the block
-//</p>
-//</div>

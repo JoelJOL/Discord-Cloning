@@ -1,0 +1,106 @@
+@media screen and (max-width: 1250px) {
+  .header-navigationBar a,
+  #header-navigationBar-language {
+    display: none;
+  }
+  .p-menu1 {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.header-icon {
+  flex: 1;
+}
+#header-icon-image {
+  width: 275px;
+  height: 100px;
+}
+.header-navigationBar {
+  flex: 1;
+  flex-direction: right;
+  padding: 14px 16px;
+  overflow: hidden;
+}
+.header-navigationBar a {
+  align-items: right;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  color: #5865f2;
+  font-size: 15px;
+  padding: 30px;
+}
+
+#header-navigationBar-language {
+  appearance: none;
+  border: none;
+  font-family: myFirstFont;
+  color: #5865f2;
+  align-items: right;
+  float: right;
+  font-size: 15px;
+  padding: 30px;
+}
+.header-navigationBar a:hover {
+  text-decoration: underline;
+}
+.header-navigationBar a.icon {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .header-navigationBar a:not(:last-child) {
+    display: none;
+  }
+  #header-navigationBar-language {
+    display: none;
+  }
+  .header-navigationBar a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header-navigationBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header-navigationBar.responsive #header-navigationBar-language {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-navigationBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header-navigationBar.responsive {
+    position: relative;
+  }
+  .header-navigationBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .header-navigationBar.responsive #header-navigationBar-language {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-navigationBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
