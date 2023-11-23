@@ -3,8 +3,20 @@
   <head>
     <title>Home</title>
     <link rel="stylesheet" href="styles/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+   
+<div class="snow"></div>
+<div class="snow2"></div>
   </head>
+
   <body>
+
+    <div class="loader hidden">
+      <img src="/Homepage/images/discord-loading.gif"/>
+
+    </div>
+
     <header>
       <nav id="navbar">
         <a href="/Homepage/home.html">
@@ -23,7 +35,7 @@
         </div>
         <div id="button-login-div">
           <a href="/Login/login.html"
-            ><button id="button-login">Login</button></a
+><button id="button-login">Login</button></a
           >
         </div>
       </nav>
@@ -35,6 +47,9 @@
         <!-- <h1>Random</h1> -->
       </div>
 
+
+      
+
       <div class="center-box">
         <h1>IMAGINE A PLACE...</h1>
         <p>
@@ -45,7 +60,7 @@
           often.
         </p>
         <div class="nav-buttons">
-          <a href="download.html">Download for Windows</a>
+          <a id="dfw" href="download.html">Download for Windows</a>
           <button id="opendis" href="open.html">
             Open Discord in your browser
           </button>
@@ -56,6 +71,21 @@
         <img src="images/top-container-left.svg" />
       </div>
     </div>
+<script>
+    function createSparkle() {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = `${Math.random() * window.innerWidth}px`;
+    sparkle.style.top = `${Math.random() * window.innerHeight}vh`;
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      document.body.removeChild(sparkle);
+    }, 1000);
+  }
+setInterval(createSparkle, 100);
+</script>
+    
 
     <div class="dynamicbox">
       <!-- <div class="container">
@@ -84,7 +114,11 @@
       </div>
     </div>
 
+    
+   
+
     <footer>
+   
       <div class="footer-nav">
         <div class="socials">
           <img id="flag" src="images/Flag-logo.png" />
@@ -161,5 +195,19 @@
     </footer>
 
     <script src="/Homepage/JS/home.js"></script>
+
+
+   
+
+
+
+
+
+
+
+ 
+ <!-- </div>
+ </div> -->
+ 
   </body>
 </html>
