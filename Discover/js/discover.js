@@ -1,55 +1,59 @@
-const url = "https://jsonplaceholder.typicode.com/posts";
-const urlImage =
-  "https://api.slingacademy.com/v1/sample-data/photos?offset=0&limit=100";
-const urlGaming = "https://picsum.photos/v2/list?page=2&limit=100";
-let j = 0;
-let prevPageNumber = 0;
-async function getData(url, j) {
-  try {
-    const response = await fetch(url, {
-      method: "get",
-    });
-    if (!response.ok) {
-      throw new Error("network response was not ok");
+const urlText="https://jsonplaceholder.typicode.com/posts";
+const urlImage="https://mocki.io/v1/e8fba4ad-c8ad-42e8-b33e-cce4b95facf8";
+const urlGaming="https://picsum.photos/v2/list?page=2&limit=100";
+let j=0;
+let i=0;
+let prevPageNumber=0;
+async function getData(urlText,j){
+    try{
+        const response = await fetch(urlText,{
+            method:'get',
+            });
+            if(!response.ok){
+                throw new Error("network response was not ok");
+            }
+            const responseData=await response.json();
+            console.log(responseData[1].body);
+            getfeed(responseData,j);
+            
+        }
+        catch(error){
+            console.error("there was a problem with fetch operation: ",error);
+        }
     }
-    const responseData = await response.json();
-    console.log(responseData[1].body);
-    getfeed(responseData, j);
-  } catch (error) {
-    console.error("there was a problem with fetch operation: ", error);
-  }
-}
-getData(url, j);
+    getData(urlText,j)
 
-async function getData1(urlImage, j) {
-  try {
-    const response1 = await fetch(urlImage, {
-      method: "get",
-    });
-    if (!response1.ok) {
-      throw new Error("network response was not ok");
+async function getData1(urlImage,j){
+    try{
+        const response1 = await fetch(urlImage,{
+            method:'get',
+            });
+            if(!response1.ok){ 
+                throw new Error("network response was not ok");
+            }
+            const responseData1=await response1.json();
+            // let a=[];
+            // for(let i=0;i<100;i++)
+            // {
+            //     a[i]=responseData1.photos[i].url;
+            // }       
+                return responseData1;
+        }
+        catch(error){
+            console.error("there was a problem with fetch operation: ",error);
+        }
     }
-    const responseData1 = await response1.json();
-    console.log(responseData1.photos[0].url);
-    b = responseData1.photos[0].url;
-    // let a=[];
-    // for(let i=0;i<100;i++)
-    // {
-    //     a[i]=responseData1.photos[i].url;
-    // }
-    return responseData1;
-  } catch (error) {
-    console.error("there was a problem with fetch operation: ", error);
-  }
-}
 
-function reloadDIV(a) {
-  // document.getElementById("div-with-feeds").innerHTML.reload;
-  pageNumberColor(a);
-  $("#div-with-feeds").empty();
-  if (a != 0) a = a * 15;
-  console.log(a);
-  getData(url, a);
+
+function reloadDIV (a) 
+{
+    // document.getElementById("div-with-feeds").innerHTML.reload;
+    pageNumberColor(a);
+    $('#div-with-feeds').empty();
+    if(a!=0)
+    a=a*15
+    console.log(a)
+    getData(urlText,a);
 }
 
 function getfeed(responseData, j) {
@@ -58,39 +62,47 @@ function getfeed(responseData, j) {
     const responseData1 = await getData1(urlImage, j);
 
     // const responseData1=getData1(urlImage,j);
-    console.log(responseData1);
+    console.log(responseData1)
+    const photosList=responseData1;
     // console.log(responseData1);
-    for (i = j; i < j + 15; i++) {
-      console.log(33);
-      let divWithFeeds = document.getElementById("div-with-feeds");
-      let feed = document.createElement("div");
-      let feedImageDiv = document.createElement("div");
-      let feedImage = document.createElement("img");
-      // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
-      feedImage.setAttribute("src", responseData1.photos[i].url);
-      feed.classList.add("feed1");
-      feedImageDiv.classList.add("feedImageDiv");
-      feedImage.classList.add("feed-image");
-      feedImageDiv.appendChild(feedImage);
-      feed.appendChild(feedImageDiv);
-      let feedRightSide = document.createElement("div");
-      let feedHeading = document.createElement("h4");
-      feedHeading.textContent = responseData[i].title;
-      let feedContent = document.createElement("p");
-      feedContent.textContent = responseData[i].body;
-      feedRightSide.classList.add("feed-right-side");
-      feedHeading.classList.add("feed-heading");
-      feedHeading.addEventListener("click", () => {
-        console.log("hello event");
-        openNewPage(responseData1.photos[i].id);
-      });
-      feedContent.classList.add("feed-cnotent");
-      feedRightSide.appendChild(feedHeading);
-      feedRightSide.appendChild(feedContent);
-      feed.appendChild(feedRightSide);
-      divWithFeeds.appendChild(feed);
-    }
-  })();
+    const createFeed=(photosList,responseData)=>
+            {
+                let feed=document.createElement('div');
+                let feedImageDiv=document.createElement('div');
+                let feedImage=document.createElement('img');
+                // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
+                feedImage.setAttribute("src",photosList.url);
+                feed.classList.add("feed1");
+                feedImageDiv.classList.add("feedImageDiv");
+                feedImage.classList.add("feed-image");
+                feedImageDiv.appendChild(feedImage);
+                feed.appendChild(feedImageDiv);
+                let feedRightSide=document.createElement('div');
+                const feedHeading=document.createElement('h4');
+                feedHeading.textContent=responseData[i].title;
+                let feedContent=document.createElement('p');
+                feedContent.textContent=responseData[i].body;
+                feedRightSide.classList.add("feed-right-side");
+                feedHeading.classList.add("feed-heading");
+                feedHeading.addEventListener('click',()=>{
+                openNewPage(photosList.id);
+                ;})
+                feedContent.classList.add("feed-cotent");
+                feedRightSide.appendChild(feedHeading);
+                feedRightSide.appendChild(feedContent);
+                feed.appendChild(feedRightSide);
+                i++;
+                return feed;
+            }
+            photosList.map((photosList,index)=>{
+                if(index<=j+15&&index>i)
+                {
+                const divWithFeeds=document.getElementById("div-with-feeds");
+                const feed = createFeed(photosList,responseData);
+                divWithFeeds.appendChild(feed);
+                }
+                });
+        })()
 }
 
 function pageNumberColor(pageNo) {
@@ -105,108 +117,92 @@ function pageNumberColor(pageNo) {
 //     $('#div-with-feeds').empty();
 // });
 
-const clickedDiv = document.getElementsByClassName("category");
-for (let k = 0; k < 6; k++) {
-  clickedDiv[k].addEventListener("click", function () {
-    console.log("Div was clicked!");
-    $("#div-with-feeds").empty();
+const clickedDiv=document.getElementsByClassName("category");
+
+for(let k=0;k<6;k++)
+{
+clickedDiv[k].addEventListener('click', function() {
+    console.log('Div was clicked!');
+    $('#div-with-feeds').empty();
     pageNumberColor(0);
     getDataGaming(urlGaming, 0);
   });
 }
-
-async function getDataText(url, j) {
-  try {
-    const response = await fetch(url, {
-      method: "get",
-    });
-    if (!response.ok) {
-      throw new Error("network response was not ok");
+  
+  async function getDataText(urlText,j){
+    try{
+        const response = await fetch(urlText,{
+            method:'get',
+            });
+            if(!response.ok){
+                throw new Error("network response was not ok");
+            }
+            const responseData=await response.json();
+            // console.log(responseData[1].body);
+           return responseData;
+            
+        }
+        catch(error){
+            console.error("there was a problem with fetch operation: ",error);
+        }
     }
-    const responseData = await response.json();
-    // console.log(responseData[1].body);
-    return responseData;
-  } catch (error) {
-    console.error("there was a problem with fetch operation: ", error);
-  }
-}
-async function getDataGaming(urlGaming, j) {
-  try {
-    const response = await fetch(urlGaming, {
-      method: "get",
-    });
-    if (!response.ok) {
-      throw new Error("network response was not ok");
+  async function getDataGaming(urlGaming,j){
+    try{
+        const response = await fetch(urlGaming,{
+            method:'get',
+            });
+            if(!response.ok){
+                throw new Error("network response was not ok");
+            }
+            const responseData=await response.json();
+            console.log(responseData);
+            getfeedGaming(responseData,j);
+            
+        }
+        catch(error){
+            console.error("there was a problem with fetch operation: ",error);
+        }
     }
-    const responseData = await response.json();
-    console.log(responseData);
-    getfeedGaming(responseData, j);
-  } catch (error) {
-    console.error("there was a problem with fetch operation: ", error);
-  }
-}
 
-function getfeedGaming(responseData, j) {
-  (async () => {
-    console.log(await getDataText(url, j));
-    const responseData1 = await getDataText(url, j);
-
+function getfeedGaming(responseData,j)
+{
+    (async () => {
+        console.log(await getDataText(urlText,j))
+        const responseData1=await getDataText(urlText,j);
+     
     // const responseData1=getData1(urlImage,j);
     console.log(responseData1);
     // console.log(responseData1);
-    for (i = j; i < j + 17; i++) {
-      console.log(99);
-      let divWithFeeds = document.getElementById("div-with-feeds");
-      let feed = document.createElement("div");
-      let feedImageDiv = document.createElement("div");
-      let feedImage = document.createElement("img");
-      // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
-      feedImage.setAttribute("src", responseData[i].download_url);
-      feed.classList.add("feed1");
-      feedImageDiv.classList.add("feedImageDiv");
-      feedImage.classList.add("feed-image");
-      feedImageDiv.appendChild(feedImage);
-      feed.appendChild(feedImageDiv);
-      let feedRightSide = document.createElement("div");
-      let feedHeading = document.createElement("h4");
-      feedHeading.textContent = responseData1[i].title;
-      let feedContent = document.createElement("p");
-      feedContent.textContent = responseData1[i].body;
-      feedRightSide.classList.add("feed-right-side");
-      feedHeading.classList.add("feed-heading");
-      feedContent.classList.add("feed-cnotent");
-      feedRightSide.appendChild(feedHeading);
-      feedRightSide.appendChild(feedContent);
-      feed.appendChild(feedRightSide);
-      divWithFeeds.appendChild(feed);
-    }
-  })();
+    for(i=j;i<j+17;i++)
+            {
+                let divWithFeeds=document.getElementById("div-with-feeds");
+                let feed=document.createElement('div');
+                let feedImageDiv=document.createElement('div');
+                let feedImage=document.createElement('img');
+                // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
+                feedImage.setAttribute("src",responseData[i].download_url);
+                feed.classList.add("feed1");
+                feedImageDiv.classList.add("feedImageDiv");
+                feedImage.classList.add("feed-image");
+                feedImageDiv.appendChild(feedImage);
+                feed.appendChild(feedImageDiv);
+                let feedRightSide=document.createElement('div');
+                let feedHeading=document.createElement('h4');
+                let k=i-1;
+                feedHeading.textContent=responseData1[k].title;
+                let feedContent=document.createElement('p');
+                feedContent.textContent=responseData1[k].body;
+                feedRightSide.classList.add("feed-right-side");
+                feedHeading.classList.add("feed-heading");
+                feedContent.classList.add("feed-cnotent");
+                feedRightSide.appendChild(feedHeading);
+                feedRightSide.appendChild(feedContent);
+                feed.appendChild(feedRightSide);
+                divWithFeeds.appendChild(feed);
+            }
+        })()
 }
-const openNewPage = (responseData1) => {
-  console.log(responseData1);
-  window.location.href = `individualFeed.html?id=${responseData1}`;
-};
-
-document.addEventListener("DOMContentLoaded", function () {
-  let loggedInUserData = sessionStorage.getItem("loggedInUser");
-  if (loggedInUserData) {
-    let loggedInUser = JSON.parse(loggedInUserData);
-    let loginButtonDiv = document.getElementById("button-login-div");
-    if (loginButtonDiv) {
-      loginButtonDiv.remove();
-    }
-    let navBar = document.getElementById("navbar");
-    let profileIconDiv = document.createElement("div");
-    profileIconDiv.setAttribute("id", "profile-icon-div");
-    if (profileIconDiv) {
-      let profileRedirect = document.createElement("a");
-      profileRedirect.href = "/Login/login.html";
-      let profileIcon = document.createElement("img");
-      profileIcon.src = loggedInUser.image;
-      profileIcon.alt = "Profile Icon";
-      profileRedirect.appendChild(profileIcon);
-      profileIconDiv.appendChild(profileRedirect);
-    }
-    navBar.appendChild(profileIconDiv);
-  }
-});
+const openNewPage = (Data1)=>{
+    console.log(Data1)
+    window.location.href = `individualFeed.html?id=${Data1}`
+}
