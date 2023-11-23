@@ -6,15 +6,92 @@
 
 
 
-
-
-
-
-
 @font-face {
     font-family: "discordfont";
     src:url(/Homepage/styles/Ginto-Nord-700.woff) format('woff');
   }
+
+body {
+    
+}
+
+.loader
+{
+    position: fixed;
+    z-index:99;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+
+}
+
+
+.loader img
+{
+    width: 200px;;
+}
+
+.loader.hidden
+{
+animation: fadeOut 2s;
+animation-fill-mode:forwards ;
+}
+
+
+@keyframes fadeOut
+{
+  100%
+  {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+body {
+    
+}
+
+.loader
+{
+    position: fixed;
+    z-index:99;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+
+}
+
+
+.loader img
+{
+    width: 200px;;
+}
+
+.loader.hidden
+{
+animation: fadeOut 2s;
+animation-fill-mode:forwards ;
+}
+
+
+@keyframes fadeOut
+{
+  100%
+  {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 
 
@@ -34,6 +111,7 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
     
   position: absolute;
   bottom: -28px;
+  bottom: -28px;
   left: 400px;
    
 }
@@ -50,7 +128,7 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
 } 
 
 .background {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -179,19 +257,28 @@ a{
 .container  {
     padding-top: 100px;
     width: 100%;
+    padding-top: 100px;
+    width: 100%;
     align-items: center;
     display: flex;
     justify-content: center;
+    
+    
     
     
 }
 
 .container-img {
     /* max-width: 678px;
-    max-height: 440px; */
- 
-    
+    max-height: 440px; */   
    
+}
+.home-feed-images{
+    max-width: 522px;
+    height: 290px;
+    margin-left: 40px;
+    margin-right: 40px;
+  
 }
 
 .container .description
@@ -200,14 +287,18 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    justify-content: space-around;
     max-width: 440px;
+    height: 100%;
     height: 100%;
 }
 
 .description h2 {
     font-size: 31px;
+    font-size: 31px;
     font-weight: 700;
     font-family: discordfont;
+    width: 457px;
     width: 457px;
 
 }
@@ -217,6 +308,7 @@ a{
     font-size: 20px;
     line-height: 32px;
     color: rgb(100, 100, 100);
+    width: 457px;
 }
 
 .lastcontainer
@@ -333,39 +425,6 @@ background-color: #23272a;;
     text-decoration: none;
   }
 
-.bottom
-{
-    margin-top: 90px;
-    background:rgb(247, 245, 245)
-
-}
-
-.endcontent
-{
-    padding-top: 100px;
-    background:rgb(247, 245, 245)
-}
-
-.endcontent h1
-{
-font-family: discordfont;
-text-align: center;
-}
-
-.endcontent p
-{
-    padding: 30px;
-text-align: center;
-font-size: 20px;
-    line-height: 32px;
-    color: rgb(100, 100, 100);
-}
-#endcontentimage
-{
-
-margin-left: 100px;
-}
-
 
 
   .footer-bar {
@@ -416,4 +475,83 @@ height: 30px;
 width: 50px;
 }
 
+.snow, .snow2
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url(/Homepage/images/snow.png);
+}
+
+.snow{
+   background-size: 70em; 
+   animation:
+      snowfall 30s linear infinite;
+}
+.snow2
+{
+    background-size: 50em;
+     animation: 
+               snowfall 30s linear infinite;
+     opacity: 0.5;          
+}
+@keyframes snowfall
+{
+    100%
+    {
+        background-position:70em 70em;
+    }
+}
   
+@keyframes snowfall2
+{
+    100%
+    {
+        background-position:50em 0;
+
+    }
+}
+
+
+/* //////////////////////////////////////////////////////// */
+
+button, input {
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+/* 
+/////////////////////////////////////////////// */
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid yellow;
+    opacity: 0;
+    pointer-events: none;
+    animation: sparkleAnimation 1s linear infinite;
+  }
+
+  @keyframes sparkleAnimation {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(0.5);
+      opacity: 0;
+    }
+  }
