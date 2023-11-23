@@ -1,5 +1,4 @@
 const url="https://mocki.io/v1/cf4f1528-026b-404d-b9bb-cb4e8b6e9057"
- 
 async function getData(url){
     try{
         const response = await fetch(url,{
@@ -111,7 +110,7 @@ catch(error){
 }
 }
 getData(url)
-let links =["safetylibrary.html","privacyhub.html","parenthub.html","transparency.html","safetynewshub.html","policyhub.html"];
+let links =["safetylibrary.html","privacyhub.html","parenthub.html","transparencyhub.html","safetynewshub.html","policyhub.html"];
 setTimeout(()=>{
     const clickedDiv=document.getElementsByClassName("safety-detail-content");
     for(let i=0;i<6;i++)
@@ -123,3 +122,10 @@ clickedDiv[i].addEventListener('click', function() {
 });
 }
 },500)
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

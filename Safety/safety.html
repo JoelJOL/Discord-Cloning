@@ -120,6 +120,23 @@
       </div>
     </div>
     <div class="safety-detail"></div>
+    <!-- popup -->
+    <button class="open-button" onclick="openForm()">
+     <img src="images/Discord-Emblem.png" alt="" class="discord-popup-image">
+    </button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Need</h1>
+
+    <label for="msg"><b>Help??👾</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
     <footer>
       <div class="footer-nav">
         <div class="socials">
