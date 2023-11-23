@@ -6,6 +6,7 @@
     <title>Discord</title>
     <link rel="stylesheet" href="styles/support.css" />
     <link rel="stylesheet" href="styles/support-1.css" />
+    <link rel="stylesheet" href="styles/support-navbarMenu.css" />
   </head>
   <body>
     <header class="header">
@@ -16,7 +17,7 @@
             id="header-icon-image"
         /></a>
       </div>
-      <div class="header-navigationBar">
+      <div class="header-navigationBar" id="header-navBar">
         <a href="support-feedback.html" id="header-navigationBar-feedback"
           >Feedback</a
         >
@@ -30,6 +31,9 @@
           >Submit a Request</a
         >
         <a href="signin.html" id="header-navigationBar-signin">Sign In</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          &#9776;
+        </a>
       </div>
     </header>
     <div class="top">
@@ -69,4 +73,5 @@
   </body>
   <script src="js/support.js"></script>
   <script src="js/support-1.js"></script>
+  <script src="js/support-navbar.js"></script>
 </html>

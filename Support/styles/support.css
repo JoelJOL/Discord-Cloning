@@ -1,5 +1,7 @@
-*{
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: myFirstFont;
@@ -7,44 +9,6 @@ body {
 @font-face {
   font-family: myFirstFont;
   src: url(/Discord-Cloning/Support/fonts/Ginto-Nord-700\ 2.woff);
-}
-.header {
-  display: flex;
-  width: 1570px;
-  justify-content: space-between;
-  position: relative;
-}
-.header-icon {
-  flex: 1;
-}
-#header-icon-image {
-  width: 275px;
-  height: 100px;
-}
-.header-navigationBar {
-  flex: 1;
-  flex-direction: right;
-  text-align: center;
-  overflow: hidden;
-}
-.header-navigationBar a {
-  align-items: right;
-  text-decoration: none;
-  color: #5865f2;
-  font-size: 15px;
-  padding: 30px;
-}
-
-#header-navigationBar-language {
-  appearance: none;
-  border: none;
-  font-family: myFirstFont;
-  color: #5865f2;
-  font-size: 15px;
-  padding: 30px;
-}
-.header-navigationBar a:hover {
-  text-decoration: underline;
 }
 .top {
   background-image: url(../images/b7e9dce75f9edb23504e13b4699e208f204e5015.png);
@@ -103,6 +67,7 @@ section {
 }
 #welcome-beginnerGuide-link:hover {
   text-decoration: underline;
+  color: red;
 }
 .more-links {
   width: 100%;

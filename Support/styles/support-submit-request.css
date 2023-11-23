@@ -5,44 +5,7 @@ body {
   font-family: myFirstFont;
   src: url(/Discord-Cloning/Support/fonts/Ginto-Nord-700\ 2.woff);
 }
-.header {
-  display: flex;
-  width: 1570px;
-  justify-content: space-between;
-  position: relative;
-}
-.header-icon {
-  flex: 1;
-}
-#header-icon-image {
-  width: 275px;
-  height: 100px;
-}
-.header-navigationBar {
-  flex: 1;
-  flex-direction: right;
-  text-align: center;
-  overflow: hidden;
-}
-.header-navigationBar a {
-  align-items: right;
-  text-decoration: none;
-  color: #5865f2;
-  font-size: 15px;
-  padding: 30px;
-}
 
-#header-navigationBar-language {
-  appearance: none;
-  border: none;
-  font-family: myFirstFont;
-  color: #5865f2;
-  font-size: 15px;
-  padding: 30px;
-}
-.header-navigationBar a:hover {
-  text-decoration: underline;
-}
 .timeline-Search {
   border-top: 1px grey solid;
   border-bottom: 1px grey solid;
