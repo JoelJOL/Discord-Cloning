@@ -46,7 +46,7 @@ function validateRegister() {
   let monthField = document.getElementById("month-list");
   let dateField = document.getElementById("date-list");
   let yearField = document.getElementById("year-list");
-  let date = `${yearField.value}/${monthField.value}/${dateField.value}`;     // Construct the birthdate in the format YYYY/MM/DD
+  let date = `${yearField.value}/${monthField.value}/${dateField.value}`; // Construct the birthdate in the format YYYY/MM/DD
   // Create user data object
   let userData = {
     id: 31,
@@ -57,15 +57,15 @@ function validateRegister() {
     birthDate: date,
     image: `https://robohash.org/${usernameField.value}`,
   };
-  const postUrl = "https://dummyjson.com/users/add";                  // URL for posting user data
-  const postResponse = addUser(postUrl, userData);                    // Add user using the addUser function
+  const postUrl = "https://dummyjson.com/users/add"; // URL for posting user data
+  const postResponse = addUser(postUrl, userData); // Add user using the addUser function
   console.log(postResponse);
   // Retrieve and update the registered users data in session storage
   let registeredUsers =
     JSON.parse(sessionStorage.getItem("registeredUsers")) || [];
   registeredUsers.push(userData);
   sessionStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
-  window.location.href = "/Login/login.html";                                  // Redirect to the login page
+  window.location.href = "/Login/login.html"; // Redirect to the login page
 }
 // function isValidDate() {}
 
