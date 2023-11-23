@@ -67,10 +67,6 @@ async function getData(url1){
 
 getData(url1);
 
-
-//////////////////////////////////////////////////////
-
-
 document.addEventListener('DOMContentLoaded', function () {
     // Add an event listener to the button
     document.getElementById('opendis').addEventListener('click', function () {
@@ -109,7 +105,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-  
-  /////////////////////////////////////////////////
 
-
+  document.addEventListener("DOMContentLoaded", function () {
+    let loggedInUserData = sessionStorage.getItem("loggedInUser");
+    if (loggedInUserData) {
+      let loggedInUser = JSON.parse(loggedInUserData);
+      let loginButtonDiv = document.getElementById("button-login-div");
+      if (loginButtonDiv) {
+        loginButtonDiv.remove();
+      }
+      let navBar = document.getElementById("navbar");
+      let profileIconDiv = document.createElement("div");
+      profileIconDiv.setAttribute("id", "profile-icon-div");
+      if (profileIconDiv) {
+        let profileRedirect = document.createElement("a");
+        profileRedirect.href = "/Login/login.html";
+        let profileIcon = document.createElement("img");
+        profileIcon.src = loggedInUser.image;
+        profileIcon.alt = "Profile Icon";
+        profileRedirect.appendChild(profileIcon);
+        profileIconDiv.appendChild(profileRedirect);
+      }
+      navBar.appendChild(profileIconDiv);
+    }
+  });

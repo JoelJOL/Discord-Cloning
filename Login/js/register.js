@@ -61,15 +61,22 @@ function validateRegister() {
     alert("Accept the Terms and Policy");
   } else {
     let userData = {
+      id: 31,
       email: emailField.value,
       username: usernameField.value,
       firstName: displaynameField.value,
       password: passwordField.value,
       birthDate: date,
+      image: `https://robohash.org/${usernameField.value}`,
     };
     const postUrl = "https://dummyjson.com/users/add";
     const postResponse = addUser(postUrl, userData);
     console.log(postResponse);
+    let registeredUsers =
+      JSON.parse(sessionStorage.getItem("registeredUsers")) || [];
+    registeredUsers.push(userData);
+    sessionStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
+    window.location.href = "/Login/login.html";
   }
 }
 
