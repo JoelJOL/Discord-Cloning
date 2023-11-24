@@ -23,7 +23,7 @@ console.log(users);
 
 // Function for handling the "Forgot Username" functionality
 function forgotUsername() {
-  let resetEmail = prompt("Enter an email id to send username recovery link");      // Prompt user to enter an email for username recovery
+  let resetEmail = prompt("Enter an email id to send username recovery link"); // Prompt user to enter an email for username recovery
   let validEmailExpr =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   // Validate the entered email
@@ -99,7 +99,7 @@ function isValidUsername(checkUsername) {
     if (registeredUsers.length > 0) {
       registeredUsers.forEach((registeredUser) => {
         if (registeredUser.username === checkUsername) {
-          foundUser = true;                        // Set 'foundUser' to true if the username is found
+          foundUser = true; // Set 'foundUser' to true if the username is found
         }
       });
     }
@@ -108,7 +108,7 @@ function isValidUsername(checkUsername) {
     // If the username is not found in session storage, check against fetched 'users'
     for (let i = 0; i < users.length; i++) {
       if (checkUsername === users[i].username) {
-        foundUser = true;                         // Set 'foundUser' to true if the username is found
+        foundUser = true; // Set 'foundUser' to true if the username is found
       }
     }
   }
@@ -116,15 +116,17 @@ function isValidUsername(checkUsername) {
 }
 // Helper function to check if the combination of username and password is valid in fetched 'users'
 function isValidLogin(checkUsername, checkPassword) {
-  let 
+  let matchUser = false;
   for (let i = 0; i < users.length; i++) {
     if (
       checkUsername === users[i].username &&
       checkPassword === users[i].password
     ) {
-      return i;                                 // Return user index if the combination is valid
-    } else {
-      return -1;                                // Return -1 if the combination is not valid
+      matchUser = true;
+      return i;                               // Return user index if the combination is valid
     }
+  }
+  if (matchUser === false) {
+    return -1;                                // Return -1 if the combination is invalid
   }
 }
