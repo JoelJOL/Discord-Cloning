@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     profileIconDiv.setAttribute("id", "profile-icon-div");
     if (profileIconDiv) {
       let profileRedirect = document.createElement("a");
-      profileRedirect.href = "./Login/login.html";
+      profileRedirect.href = "../Login/login.html";
       let profileIcon = document.createElement("img");
       profileIcon.src = loggedInUser.image;
       profileIcon.alt = "Profile Icon";
