@@ -116,17 +116,17 @@ function isValidUsername(checkUsername) {
 }
 // Helper function to check if the combination of username and password is valid in fetched 'users'
 function isValidLogin(checkUsername, checkPassword) {
-  let matchUser = false;
+  let userMatch = false;
   for (let i = 0; i < users.length; i++) {
     if (
       checkUsername === users[i].username &&
       checkPassword === users[i].password
     ) {
-      matchUser = true;
-      return i;                               // Return user index if the combination is valid
+      userMatch = true;
+      return i; // Return user index if the combination is valid
     }
   }
-  if (matchUser === false) {
-    return -1;                                // Return -1 if the combination is invalid
+  if (userMatch === false) {
+    return -1;
   }
 }
