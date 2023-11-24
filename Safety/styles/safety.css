@@ -148,7 +148,16 @@ a {
   width: 150px;
   height: 150px;
   padding-right: 100px;
+  animation: twinkling 2s infinite;
 }
+ @keyframes twinkling {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
 .youtube-left-star {
   flex: 1;
   padding-top: 100px;
@@ -156,11 +165,12 @@ a {
 .youtube-right-star img {
   width: 140px;
   height: 150px;
+  animation: twinkling 2s infinite;
 }
 .youtube-right-star {
   flex: 1;
   padding-top: 350px;
-  padding-left: 100px;
+  padding-left: 108px;
 }
 .safety-detail-content {
   display: flex;
@@ -312,44 +322,19 @@ footer {
   width: 50px;
 }
 .safety-detail-image img:hover {
-  animation: shake 3s;
-  animation-iteration-count: infinite;
+  background-size: cover;
+  animation: slideUp 1s ease-out;
+  transition: transform 0.3s;
+  transform: scale(1.1);
 }
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1); 
+    }
   }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
 .header-next {
   display: flex;
   background-color: #5865f2;
