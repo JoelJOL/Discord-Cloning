@@ -53,7 +53,7 @@ async function getData(url) {
         var safetyDetailArrowDiv = document.createElement("div");
         safetyDetailArrowDiv.classList.add("arrow");
         var img = document.createElement("img");
-        img.setAttribute("src", "images/arrow.png");
+        img.setAttribute("src", "./images/arrow.png");
         safetyDetailArrowDiv.appendChild(img);
         safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
         safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
@@ -93,7 +93,7 @@ async function getData(url) {
         var safetyDetailArrowDiv = document.createElement("div");
         safetyDetailArrowDiv.classList.add("arrow");
         var img = document.createElement("img");
-        img.setAttribute("src", "images/arrow.png");
+        img.setAttribute("src", "./images/arrow.png");
         safetyDetailArrowDiv.appendChild(img);
         safetyDetailExploreMoreDiv.appendChild(safetyDetailArrowDiv);
         safetyDetailTextDiv.appendChild(safetyDetailExploreMoreDiv);
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (profileIconDiv) {
         // Create a link for the profile redirect
         let profileRedirect = document.createElement("a");
-        profileRedirect.href = "/Login/login.html";
+        profileRedirect.href = "./Login/login.html";
         // Create an image element for the profile icon
         let profileIcon = document.createElement("img");
         profileIcon.src = loggedInUser.image;

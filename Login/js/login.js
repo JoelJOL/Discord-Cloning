@@ -73,7 +73,7 @@ function validateLogin() {
             "loggedInUser",
             JSON.stringify(registeredUser)
           );
-          window.location.href = "/Homepage/home.html";
+          window.location.href = "./Homepage/home.html";
         }
       });
     }
@@ -85,7 +85,7 @@ function validateLogin() {
     } else {
       // Save the matched user in session storage and redirect to homepage
       sessionStorage.setItem("loggedInUser", JSON.stringify(users[userId]));
-      window.location.href = "/Homepage/home.html";
+      window.location.href = "./Homepage/home.html";
     }
   }
 }
