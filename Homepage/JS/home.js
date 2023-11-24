@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (profileIconDiv) {
         // Create a link for the profile redirect
         let profileRedirect = document.createElement("a");
-        profileRedirect.href = "/Login/login.html";
+        profileRedirect.href = "../Login/login.html";
         // Create an image element for the profile icon
         let profileIcon = document.createElement("img");
         profileIcon.src = loggedInUser.image;
