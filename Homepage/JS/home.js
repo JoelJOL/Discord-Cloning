@@ -70,7 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function replaceWithTextbox(button) {
     var input = document.createElement("input");
     input.type = "text";
-    input.placeholder = "Enter Discord URL";
+    input.placeholder = "Enter A Username";
+    input.style.paddingRight = '80px';
+    input.style.paddingTop='20px';
+    input.style.fontSize = '16px';
+    input.style.border = 'none';
+    input.style.borderRadius = '20px';
+    input.style.outline = 'none';
+    input.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.2)'; 
 
     // Insert the input after the button
     button.parentNode.insertBefore(input, button.nextSibling);

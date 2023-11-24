@@ -123,7 +123,7 @@ nav {
 }
 #button-login {
   border-radius: 20px;
-  width: 70px;
+  width: 78px;
   height: 35px;
   border: 0px;
   cursor: pointer;
@@ -168,8 +168,8 @@ a {
 .top-container .center-box > h1 {
   color: #fff;
   font-size: 3rem;
-  padding: 40px auto;
-  margin-top: -800px;
+  padding: 100px auto;
+  margin-top: -207px;
   font-family: discordfont;
 }
 
@@ -178,7 +178,7 @@ a {
   margin: 40px auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 1000px;
-  line-height: 40px;
+  line-height: 29px;
 }
 
 .top-container .center-box > .nav-buttons {
@@ -191,7 +191,7 @@ a {
 #opendis {
   /* font-family: discordfont; */
   font-size: medium;
-  width: 350px;
+  width: 284px;
   height: 50px;
   cursor: pointer;
 }
@@ -472,4 +472,9 @@ button {
     transform: translateY(-100px) scale(0.5);
     opacity: 0;
   }
+}
+
+#opendis
+{
+    border-color: green;
 }
