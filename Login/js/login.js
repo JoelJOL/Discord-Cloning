@@ -73,7 +73,7 @@ function validateLogin() {
             "loggedInUser",
             JSON.stringify(registeredUser)
           );
-          window.location.href = ".../Homepage/home.html";
+          window.location.href = "/Homepage/home.html";
         }
       });
     }
@@ -85,7 +85,7 @@ function validateLogin() {
     } else {
       // Save the matched user in session storage and redirect to homepage
       sessionStorage.setItem("loggedInUser", JSON.stringify(users[userId]));
-      window.location.href = ".../Homepage/home.html";
+      window.location.href = "/Homepage/home.html";
     }
   }
 }
@@ -116,17 +116,14 @@ function isValidUsername(checkUsername) {
 }
 // Helper function to check if the combination of username and password is valid in fetched 'users'
 function isValidLogin(checkUsername, checkPassword) {
-  let matchUser = false;
   for (let i = 0; i < users.length; i++) {
     if (
       checkUsername === users[i].username &&
       checkPassword === users[i].password
     ) {
-      matchUser = true;
-      return i;                               // Return user index if the combination is valid
+      return i; // Return user index if the combination is valid
+    } else {
+      return -1; // Return -1 if the combination is not valid
     }
-  }
-  if (matchUser === false) {
-    return -1;                                // Return -1 if the combination is invalid
   }
 }
