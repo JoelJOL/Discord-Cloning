@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var input = document.createElement("input");
     input.type = "text";
     input.placeholder = "Enter A Username";
-    input.style.paddingRight = '80px';
-    input.style.paddingTop='20px';
-    input.style.fontSize = '16px';
-    input.style.border = 'none';
-    input.style.borderRadius = '20px';
-    input.style.outline = 'none';
-    input.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.2)'; 
+    input.style.paddingRight = "80px";
+    input.style.paddingTop = "20px";
+    input.style.fontSize = "16px";
+    input.style.border = "none";
+    input.style.borderRadius = "20px";
+    input.style.outline = "none";
+    input.style.boxShadow = "0 0 5px rgba(0, 0, 0, 0.2)";
 
     // Insert the input after the button
     button.parentNode.insertBefore(input, button.nextSibling);
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (profileIconDiv) {
         // Create a link for the profile redirect
         let profileRedirect = document.createElement("a");
-        profileRedirect.href = "../Login/login.html";
+        profileRedirect.href = "/Login/login.html";
         // Create an image element for the profile icon
         let profileIcon = document.createElement("img");
         profileIcon.src = loggedInUser.image;
