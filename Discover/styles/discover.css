@@ -4,13 +4,13 @@
 
 @font-face {
   font-family: "ginto";
-  src: url(/Discover/styles/Ginto-Nord-700.woff) format("woff");
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "ggsans";
-  src: url(/Discover/styles/ggsans-Bold.woff) format("woff");
+  src: url(../styles/ggsans-Bold.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
