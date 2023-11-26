@@ -1,4 +1,4 @@
-// Function to change the QR code image with a random number every 5 seconds
+// Function to change the QR code image with a random number every 10 seconds
 function changeQr() {
   const randomIndex = Math.floor(Math.random() * 10);
   document.getElementById(
@@ -9,17 +9,30 @@ setInterval(changeQr, 10000);
 
 // Fetch user data from a dummy JSON API and store it in the 'users' array
 const getUserData = fetch(
-  "https://dummyjson.com/users?select=id,email,firstName,username,password,birthDate,image"
+  "https://script.google.com/macros/s/AKfycbz4M_55FnUzXQOhGAD_2fPQTIZUkRcETl3D0RSE1sw7jPmSzS55MF9OMJFDJq4UPDt0bA/exec",
+  {
+    method: "GET",
+    mode: "cors",
+  }
 );
 const users = [];
 getUserData
-  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
   .then((data) => {
     data.users.forEach((element) => {
       users.push(element);
     });
+    console.log(users);
+  })
+  .catch((error) => {
+    console.error("There was a problem with the fetch operation:", error);
   });
-console.log(users);
 
 // Function for handling the "Forgot Username" functionality
 function forgotUsername() {
@@ -123,10 +136,10 @@ function isValidLogin(checkUsername, checkPassword) {
       checkPassword === users[i].password
     ) {
       userMatch = true;
-      return i;                               // Return user index if the combination is valid
+      return i; // Return user index if the combination is valid
     }
   }
   if (userMatch === false) {
-    return -1;                                // Return -1 if the combination is invalid
+    return -1; // Return -1 if the combination is invalid
   }
 }
