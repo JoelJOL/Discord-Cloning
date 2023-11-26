@@ -63,7 +63,7 @@ function getfeed(responseData, j) {
       let feed = document.createElement("div");
       let feedImageDiv = document.createElement("div");
       let feedImage = document.createElement("img");
-      // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
+      // feedImage.setAttribute("src","../Discover/images/feed-image.svg");
       feedImage.setAttribute("src", photosList.url);
       feed.classList.add("feed1");
       feedImageDiv.classList.add("feedImageDiv");
@@ -166,7 +166,7 @@ function getfeedGaming(responseData, j) {
       let feed = document.createElement("div");
       let feedImageDiv = document.createElement("div");
       let feedImage = document.createElement("img");
-      // feedImage.setAttribute("src","/Discover/images/feed-image.svg");
+      // feedImage.setAttribute("src","../Discover/images/feed-image.svg");
       feedImage.setAttribute("src", responseData[i].download_url);
       feed.classList.add("feed1");
       feedImageDiv.classList.add("feedImageDiv");
@@ -190,7 +190,7 @@ function getfeedGaming(responseData, j) {
 }
 const openNewPage = (Data1) => {
   console.log(Data1);
-  window.location.href = `individualFeed.html?id=${Data1}`;
+  window.location.href = `../Discover/individualFeed.html?id=${Data1}`;
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (profileIconDiv) {
         // Create a link for the profile redirect
         let profileRedirect = document.createElement("a");
-        profileRedirect.href = "/Login/login.html";
+        profileRedirect.href = "../Login/login.html";
         // Create an image element for the profile icon
         let profileIcon = document.createElement("img");
         profileIcon.src = loggedInUser.image;

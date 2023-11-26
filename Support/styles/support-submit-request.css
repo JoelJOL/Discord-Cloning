@@ -3,7 +3,7 @@ body {
 }
 @font-face {
   font-family: myFirstFont;
-  src: url(/Discord-Cloning/Support/fonts/Ginto-Nord-700\ 2.woff);
+  src: url(../fonts/Ginto-Nord-700_2.woff);
 }
 
 .timeline-Search {

@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "discordfont";
-  src: url(/Homepage/styles/Ginto-Nord-700.woff) format("woff");
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
 }
 
 .loader {
@@ -143,6 +143,7 @@ a {
   width: 50px;
   background-color: white;
   border-radius: 50px;
+  overflow: hidden;
 }
 #profile-icon-div img {
   height: 50px;
@@ -401,7 +402,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/Homepage/images/snow.png);
+  background: url(../images/snow.png);
 }
 
 .snow {

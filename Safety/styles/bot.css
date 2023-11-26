@@ -1,249 +1,248 @@
 * {
-    font-size: 1.3vw;
-    font-family: "Epilogue", sans-serif;
-  }
-  body .card {
-    height: 39.4vw;
-    width: 28vw;
-    background-color: white;
-    margin-left: 30vw;
-    margin-top: 5vw;
-    box-shadow: 2vw 2vw 12vw 3vw #ccc;
-  }
-  body .card #header {
-    height: 5vw;
-    background: #5865f2;
-    padding: 0vw;
-  }
-  body .card #header h1 {
-    color: #fff;
-    font-size: 2vw;
-    font-family: discordfont;
-    padding: 1vw;
-  }
-  body .card #message-section::-webkit-scrollbar {
-    width: 10px;
-  }
-  body .card #message-section {
-    height: 27vw;
-    padding: 0 2.5vw;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
-  }
-  body .card #message-section::-webkit-scrollbar-track {
-    background: var(--scrollbarBG);
-  }
-  body .card #message-section::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG);
-    border-radius: 6px;
-    border: 3px solid var(--scrollbarBG);
-  }
-  body .card #message-section #bot,
-  body .card #message-section #user {
-    position: relative;
-    bottom: 0;
-    min-height: 1.5vw;
-    border: 0.15vw solid #777;
-    background-color: #fff;
-    border-radius: 0px 1.5vw 1.5vw 1.8vw;
-    padding: 1vw;
-    margin: 1.5vw 0;
-  }
-  body .card #message-section #user {
-    border: 1.5px solid #5865f2;
-    border-radius: 1.5vw 0vw 1.5vw 1.8vw;
-    background-color: #5865f2;
-    float: right;
-  }
-  body .card #message-section #user #user-response {
-    color: #fff;
-  }
-  body .card #message-section .message {
-    color: #000;
-    clear: both;
-    line-height: 1.2vw;
-    font-size: 1.2vw;
-    padding: 8px;
-    position: relative;
-    margin: 8px 0;
-    max-width: 85%;
-    word-wrap: break-word;
-    z-index: 2;
-  }
-  body .card #input-section {
-    z-index: 1;
-    padding: 0 2.5vw;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    overflow: hidden;
-    height: 6vw;
-    width: 100%;
-  }
-  body .card #input-section input {
-    color: #000;
-    min-width: 0.5vw;
-    outline: none;
-    height: 5vw;
-    width: 28vw;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: solid #5865f2 0.2vw;
-  }
-  body .card .send {
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    flex: 0 0 auto;
-    /* margin-left: vw; */
-    margin-right: 0vw;
-    padding: 0;
-    position: relative;
-    outline: none;
-  }
-  body .card .send .circle {
-    position: relative;
-    width: 4.8vw;
-    height: 4.8vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  body .card .send .circle i {
-    font-size: 3vw;
-    margin-left: -1vw;
-    margin-top: 1vw;
-  }
-  .card {
-    position: fixed;
-    top: 0;
-    right: 10px;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 22px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    display: none; /* Initially hidden */
+  font-size: 1.3vw;
+  font-family: "Epilogue", sans-serif;
+}
+body .card {
+  height: 39.4vw;
+  width: 28vw;
+  background-color: white;
+  margin-left: 30vw;
+  margin-top: 5vw;
+  box-shadow: 2vw 2vw 12vw 3vw #ccc;
+}
+body .card #header {
+  height: 5vw;
+  background: #5865f2;
+  padding: 0vw;
+}
+body .card #header h1 {
+  color: #fff;
+  font-size: 2vw;
+  font-family: discordfont;
+  padding: 1vw;
+}
+body .card #message-section::-webkit-scrollbar {
+  width: 10px;
+}
+body .card #message-section {
+  height: 27vw;
+  padding: 0 2.5vw;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body .card #message-section::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body .card #message-section::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+body .card #message-section #bot,
+body .card #message-section #user {
+  position: relative;
+  bottom: 0;
+  min-height: 1.5vw;
+  border: 0.15vw solid #777;
+  background-color: #fff;
+  border-radius: 0px 1.5vw 1.5vw 1.8vw;
+  padding: 1vw;
+  margin: 1.5vw 0;
+}
+body .card #message-section #user {
+  border: 1.5px solid #5865f2;
+  border-radius: 1.5vw 0vw 1.5vw 1.8vw;
+  background-color: #5865f2;
+  float: right;
+}
+body .card #message-section #user #user-response {
+  color: #fff;
+}
+body .card #message-section .message {
+  color: #000;
+  clear: both;
+  line-height: 1.2vw;
+  font-size: 1.2vw;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: 2;
+}
+body .card #input-section {
+  z-index: 1;
+  padding: 0 2.5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  height: 6vw;
+  width: 100%;
+}
+body .card #input-section input {
+  color: #000;
+  min-width: 0.5vw;
+  outline: none;
+  height: 5vw;
+  width: 28vw;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #5865f2 0.2vw;
+}
+body .card .send {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  /* margin-left: vw; */
+  margin-right: 0vw;
+  padding: 0;
+  position: relative;
+  outline: none;
+}
+body .card .send .circle {
+  position: relative;
+  width: 4.8vw;
+  height: 4.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .card .send .circle i {
+  font-size: 3vw;
+  margin-left: -1vw;
+  margin-top: 1vw;
+}
+.card {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 22px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: none; /* Initially hidden */
+}
 
-  }
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.open-button {
+  /* background-color: black; */
+  background-image: url("../images/Discord-Emblem.png");
+  background-size: cover;
+  background-position: center;
+  /* padding: 16px 20px; */
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  /* display: inline-block; */
+}
+.open-button img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+}
 
-  /* Close button styles */
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  .open-button {
-    /* background-color: black; */
-    background-image: url("/Safety/images/Discord-Emblem.png");
-    background-size:cover;
-    background-position: center;
-    /* padding: 16px 20px; */
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
-    /* display: inline-block; */
-  }
-  .open-button img{
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
-  }
-  
-  /* The popup chat - hidden by default */
-  .chat-popup {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width textarea */
-  .form-container textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-    resize: none;
-    min-height: 200px;
-  }
-  
-  /* When the textarea gets focus, do something */
-  .form-container textarea:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/send button */
-  .form-container .btn {
-    background-color: #5865f2;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom: 10px;
-    opacity: 0.8;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: white;
-    border: solid #5865f2;
-    color: #5865f2;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover,
-  .open-button:hover {
-    opacity: 1;
-  }
-  .chat-popup h1 {
-    color: #5865f2;
-  }
-  .chat-popup b {
-    color: #5865f2;
-    font-size: 26px;
-  }
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
 
-  #help-button:hover {
-    background-color: #5865f2;
-  }
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
 
-  #help-message {
-    position: fixed;
-    bottom: 20px;
-    right: 100px;
-    background-color: #5865f2;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateX(20px);
-  }
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
 
-  #help-button:hover + #help-message {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #5865f2;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: white;
+  border: solid #5865f2;
+  color: #5865f2;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+.chat-popup h1 {
+  color: #5865f2;
+}
+.chat-popup b {
+  color: #5865f2;
+  font-size: 26px;
+}
+
+#help-button:hover {
+  background-color: #5865f2;
+}
+
+#help-message {
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  background-color: #5865f2;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(20px);
+}
+
+#help-button:hover + #help-message {
+  opacity: 1;
+  transform: translateX(0);
+}
