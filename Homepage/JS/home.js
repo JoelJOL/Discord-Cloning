@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
         input.style.borderRadius = '20px';
         input.style.outline = 'none';
         input.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.2)';
+        
         // Insert the input after the button
         (_a = button.parentNode) === null || _a === void 0 ? void 0 : _a.insertBefore(input, button.nextSibling);
         // Hide the button
