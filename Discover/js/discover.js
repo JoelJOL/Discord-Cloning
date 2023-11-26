@@ -67,6 +67,8 @@ function getfeed(responseData, j) {
       feedImage.setAttribute("src", photosList.url);
       feed.classList.add("feed1");
       feedImageDiv.classList.add("feedImageDiv");
+      feedImageDiv.classList.add("d-sm-flex");
+      feedImageDiv.classList.add("d-none");
       feedImage.classList.add("feed-image");
       feedImageDiv.appendChild(feedImage);
       feed.appendChild(feedImageDiv);
@@ -77,13 +79,13 @@ function getfeed(responseData, j) {
       feedContent.textContent = responseData[i].body;
       feedRightSide.classList.add("feed-right-side");
       feedHeading.classList.add("feed-heading");
-      feedHeading.addEventListener("click", () => {
-        openNewPage(photosList.id);
-      });
       feedContent.classList.add("feed-cotent");
       feedRightSide.appendChild(feedHeading);
       feedRightSide.appendChild(feedContent);
       feed.appendChild(feedRightSide);
+      feed.addEventListener("click", () => {
+        openNewPage(photosList.id);
+      });
       i++;
       return feed;
     };
@@ -173,10 +175,9 @@ function getfeedGaming(responseData, j) {
       feed.appendChild(feedImageDiv);
       let feedRightSide = document.createElement("div");
       let feedHeading = document.createElement("h4");
-      let k = i - 1;
-      feedHeading.textContent = responseData1[k].title;
+      feedHeading.textContent = responseData1[i].title;
       let feedContent = document.createElement("p");
-      feedContent.textContent = responseData1[k].body;
+      feedContent.textContent = responseData1[i].body;
       feedRightSide.classList.add("feed-right-side");
       feedHeading.classList.add("feed-heading");
       feedContent.classList.add("feed-cnotent");
