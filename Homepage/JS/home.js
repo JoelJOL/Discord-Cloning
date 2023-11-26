@@ -145,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
 document.addEventListener("DOMContentLoaded", function () {
     var loggedInUserData = sessionStorage.getItem("loggedInUser"); // Retrieve logged-in user data from session storage
     // Check if there is a logged-in user
