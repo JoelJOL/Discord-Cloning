@@ -58,6 +58,7 @@ a {
   border-radius: 50px;
   margin-top: 10px;
   background-color: white;
+  overflow: hidden;
 }
 #profile-icon-div img {
   height: 50px;
