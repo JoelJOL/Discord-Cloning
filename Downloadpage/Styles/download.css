@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  background-color: #23272a;
 }
 
 @font-face {
@@ -67,7 +68,7 @@ header {
 }
 #button-login
 {
-    
+    background-color: white;
     margin-top: 15px;
     margin-left: 137px;
     border-radius: 20px;
