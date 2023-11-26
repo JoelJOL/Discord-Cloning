@@ -194,14 +194,21 @@ input[type="text"]:focus {
   left: 37%;
   top: 91%;
 }
-.feed1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  padding: 5px;
-  border-radius: 20px;
-  cursor: pointer;
+#div-with-feeds-my{
+    /* position: absolute; */
+    margin: 3% 0% 0% 0%;
+    left:37%;
+    top:91%;
+}
+.feed1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    
 }
 .feed1:hover {
   /* background-color: rgb(227, 227, 227); */
@@ -359,5 +366,54 @@ footer {
   cursor: pointer;
 }
 .modal-backdrop {
-  z-index: -1;
+    z-index: 1;
+  }
+.modal-body{
+    padding: 30px;
+}
+  .generate-image{
+    width: 300px;
+  }
+  /* #your-server-image{
+
+  } */
+.generate-button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 0px;
+    box-shadow: 0px 0px 10px black;
+}
+.generate-button:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 0px;
+}
+/* .dropdown-center{
+    padding-bottom: 100px;
+} */
+.dropdown-toggle{
+    background-color: rgb(80, 80, 250);
+    color: white;
+    width: 200px;
+}
+.dropdown-item{
+    color: white;
+}
+.modal-subhead{
+    font-weight: 500;
+}
+.input-server-name{
+    resize: none;
+}
+#server-description{
+    width: 300px;
+    height: 120px;
+    margin-left: 8px;
+}
+.change-div{
+    display: none;
 }
