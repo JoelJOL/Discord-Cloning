@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
     // Function to replace the button with a textbox
     function replaceWithTextbox(button) {
         var _a;
@@ -119,12 +120,18 @@ document.addEventListener("DOMContentLoaded", function () {
         input.type = "text";
         input.placeholder = "Enter A Username";
         input.style.paddingRight = '80px';
-        input.style.paddingTop = '20px';
+        input.style.paddingTop = '15px';
+        input.style.paddingBottom = '15px';
         input.style.fontSize = '16px';
         input.style.border = 'none';
         input.style.borderRadius = '20px';
         input.style.outline = 'none';
         input.style.boxShadow = '0 0 5px rgba(0, 0, 0, 0.2)';
+        input.style.textAlign = 'center';
+       
+    
+
+        
         // Insert the input after the button
         (_a = button.parentNode) === null || _a === void 0 ? void 0 : _a.insertBefore(input, button.nextSibling);
         // Hide the button
