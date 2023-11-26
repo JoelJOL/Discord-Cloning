@@ -130,11 +130,11 @@ setTimeout(() => {
   }
 }, 500);
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementsByClassName("card").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementsByClassName("card").style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
