@@ -12,7 +12,10 @@ const getUserData = fetch(
   "https://script.google.com/macros/s/AKfycbz4M_55FnUzXQOhGAD_2fPQTIZUkRcETl3D0RSE1sw7jPmSzS55MF9OMJFDJq4UPDt0bA/exec",
   {
     method: "GET",
-    mode: "cors",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Access-Control-Allow-Origin": "https://joeljol.github.io",
+    },
   }
 );
 const users = [];
