@@ -65,7 +65,7 @@ function validateRegister() {
     JSON.parse(sessionStorage.getItem("registeredUsers")) || [];
   registeredUsers.push(userData);
   sessionStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
-  window.location.href = "/Login/login.html"; // Redirect to the login page
+  window.location.href = "../Login/login.html"; // Redirect to the login page
 }
 // function isValidDate() {}
 
