@@ -23,6 +23,12 @@ header {
 .center-box {
   color: white;
 }
+
+.center-box h1
+{
+    font-family: discordfont;
+}
+
 .secondmain {
   background-color: #23272a;
   padding: 50px;
@@ -45,4 +51,42 @@ header {
   line-height: 24px;
   transition: all 0.2s;
   display: flex;
+}
+
+#nav-items
+{
+    padding-left: 77px;
+    margin-top: 15px;
+}
+#nav-items a
+{
+    padding-left: 30px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#button-login
+{
+    
+    margin-top: 15px;
+    margin-left: 137px;
+    border-radius: 20px;
+    width: 78px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+.nav-buttonstop
+{
+flex: content;
+display: flex;
+}
+#opendis
+{
+    margin-left: 27px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
 }
