@@ -13,7 +13,7 @@ const month = [
   "December",
 ];
 // Dynamically populate the month dropdown list
-for (let i = 0o0; i < month.length; i++) {
+for (let i = 0; i < month.length; i++) {
   let monthList = document.getElementById("month-list");
   let monthItem = document.createElement("option");
   monthItem.setAttribute("value", `${i + 1}`);
@@ -21,7 +21,7 @@ for (let i = 0o0; i < month.length; i++) {
   monthList.appendChild(monthItem);
 }
 // Dynamically populate the date dropdown list
-for (let i = 0o1; i <= 31; i++) {
+for (let i = 1; i <= 31; i++) {
   let dateList = document.getElementById("date-list");
   let dateItem = document.createElement("option");
   dateItem.setAttribute("value", `${i}`);
@@ -63,10 +63,10 @@ async function validateRegister() {
   const postResponse = await addUser(postUrl, userData); // Add user using the addUser function
   console.log(postResponse);
   // Retrieve and update the registered users data in session storage
-  // let registeredUsers =
-  //   JSON.parse(sessionStorage.getItem("registeredUsers")) || [];
-  // registeredUsers.push(userData);
-  // sessionStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
+  let registeredUsers =
+    JSON.parse(sessionStorage.getItem("registeredUsers")) || [];
+  registeredUsers.push(userData);
+  sessionStorage.setItem("registeredUsers", JSON.stringify(registeredUsers));
   window.location.href = "../Login/login.html"; // Redirect to the login page
 }
 // function isValidDate() {}

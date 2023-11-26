@@ -9,19 +9,11 @@ setInterval(changeQr, 10000);
 
 // Fetch user data from a dummy JSON API and store it in the 'users' array
 const getUserData = fetch(
-  "https://script.google.com/macros/s/AKfycbz4M_55FnUzXQOhGAD_2fPQTIZUkRcETl3D0RSE1sw7jPmSzS55MF9OMJFDJq4UPDt0bA/exec",
-  {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      "Access-Control-Allow-Origin": "https://joeljol.github.io",
-    },
-  }
+  "https://dummyjson.com/users?select=id,email,firstName,username,password,birthDate,image"
 );
 const users = [];
 getUserData
   .then((response) => {
-    console.log(response);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
