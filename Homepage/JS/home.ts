@@ -1,10 +1,3 @@
-// 
-
-
-
-
-
-
 const url1: string = "https://mocki.io/v1/89d8db87-1e7d-4756-a1d7-908747f7049d";
 
 async function getData(url1: string): Promise<void> {
@@ -134,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (profileIconDiv) {
         // Create a link for the profile redirect
         const profileRedirect = document.createElement("a");
-        profileRedirect.href = "/Login/login.html";
+        profileRedirect.href = "../Login/login.html";
         // Create an image element for the profile icon
         const profileIcon = document.createElement("img");
         profileIcon.src = loggedInUser.image;

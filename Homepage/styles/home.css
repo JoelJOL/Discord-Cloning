@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "discordfont";
-  src: url(/Homepage/styles/Ginto-Nord-700.woff) format("woff");
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
 }
 
 .loader {
