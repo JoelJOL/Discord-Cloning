@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
     // Function to replace the button with a textbox
     function replaceWithTextbox(button) {
         var _a;
