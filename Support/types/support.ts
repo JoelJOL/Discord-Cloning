@@ -25,7 +25,7 @@ function create(comment: Comment, Card: HTMLDivElement): void {
   cardText.className = "card-text";
 
   const cardLink: HTMLAnchorElement = document.createElement("a");
-  cardLink.href = "#"; // You should provide a valid URL here
+  cardLink.href = ""; // You should provide a valid URL here
   cardLink.className = "card-link";
 
   const cardTitle: HTMLHeadingElement = document.createElement("h3");
