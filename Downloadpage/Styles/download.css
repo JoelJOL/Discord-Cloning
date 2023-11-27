@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #23272a;
+}
+
+@font-face {
+  font-family: "discordfont";
+  src: url(../Styles/Ginto-Nord-700.woff) format("woff");
+}
+
+#logo img {
+  width: 100px;
+}
+
+header {
+  background-color: #23272a;
+}
+/* .top-container
+{
+    background-color:  #23272a;
+} */
+
+.center-box {
+  color: white;
+}
+
+.center-box h1
+{
+    font-family: discordfont;
+}
+
+.secondmain {
+  background-color: #23272a;
+  padding: 50px;
+}
+
+#dfw {
+  width: auto;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  background-color: #5865f2;
+  border-radius: 28px;
+  align-items: center;
+  margin-top: 0;
+  padding: 14px 32px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  transition: all 0.2s;
+  display: flex;
+}
+
+#nav-items
+{
+    padding-left: 77px;
+    margin-top: 15px;
+}
+#nav-items a
+{
+    padding-left: 30px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#button-login
+{
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 137px;
+    border-radius: 20px;
+    width: 78px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+}
+.nav-buttonstop
+{
+flex: content;
+display: flex;
+}
+#opendis
+{
+    margin-left: 27px;
+    margin-top: 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+}

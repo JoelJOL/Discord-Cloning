@@ -1,4 +1,4 @@
-// Function to change the QR code image with a random number every 5 seconds
+// Function to change the QR code image with a random number every 10 seconds
 function changeQr() {
   const randomIndex = Math.floor(Math.random() * 10);
   document.getElementById(
@@ -13,17 +13,25 @@ const getUserData = fetch(
 );
 const users = [];
 getUserData
-  .then((response) => response.json())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
   .then((data) => {
     data.users.forEach((element) => {
       users.push(element);
     });
+    console.log(users);
+  })
+  .catch((error) => {
+    console.error("There was a problem with the fetch operation:", error);
   });
-console.log(users);
 
 // Function for handling the "Forgot Username" functionality
 function forgotUsername() {
-  let resetEmail = prompt("Enter an email id to send username recovery link");      // Prompt user to enter an email for username recovery
+  let resetEmail = prompt("Enter an email id to send username recovery link"); // Prompt user to enter an email for username recovery
   let validEmailExpr =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   // Validate the entered email
@@ -73,7 +81,7 @@ function validateLogin() {
             "loggedInUser",
             JSON.stringify(registeredUser)
           );
-          window.location.href = "/Homepage/home.html";
+          window.location.href = "../Homepage/home.html";
         }
       });
     }
@@ -85,7 +93,7 @@ function validateLogin() {
     } else {
       // Save the matched user in session storage and redirect to homepage
       sessionStorage.setItem("loggedInUser", JSON.stringify(users[userId]));
-      window.location.href = "/Homepage/home.html";
+      window.location.href = "../Homepage/home.html";
     }
   }
 }
@@ -99,7 +107,7 @@ function isValidUsername(checkUsername) {
     if (registeredUsers.length > 0) {
       registeredUsers.forEach((registeredUser) => {
         if (registeredUser.username === checkUsername) {
-          foundUser = true;                        // Set 'foundUser' to true if the username is found
+          foundUser = true; // Set 'foundUser' to true if the username is found
         }
       });
     }
@@ -108,7 +116,7 @@ function isValidUsername(checkUsername) {
     // If the username is not found in session storage, check against fetched 'users'
     for (let i = 0; i < users.length; i++) {
       if (checkUsername === users[i].username) {
-        foundUser = true;                         // Set 'foundUser' to true if the username is found
+        foundUser = true; // Set 'foundUser' to true if the username is found
       }
     }
   }
@@ -116,15 +124,17 @@ function isValidUsername(checkUsername) {
 }
 // Helper function to check if the combination of username and password is valid in fetched 'users'
 function isValidLogin(checkUsername, checkPassword) {
-  let 
+  let userMatch = false;
   for (let i = 0; i < users.length; i++) {
     if (
       checkUsername === users[i].username &&
       checkPassword === users[i].password
     ) {
-      return i;                                 // Return user index if the combination is valid
-    } else {
-      return -1;                                // Return -1 if the combination is not valid
+      userMatch = true;
+      return i; // Return user index if the combination is valid
     }
+  }
+  if (userMatch === false) {
+    return -1; // Return -1 if the combination is invalid
   }
 }

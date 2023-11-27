@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "discordfont";
-  src: url(/Homepage/styles/Ginto-Nord-700.woff) format("woff");
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
 }
 
 .loader {
@@ -26,7 +26,7 @@
 }
 
 .loader.hidden {
-  animation: fadeOut 2s;
+  animation: fadeOut 10s;
   animation-fill-mode: forwards;
 }
 
@@ -35,9 +35,6 @@
     opacity: 0;
     visibility: hidden;
   }
-}
-
-body {
 }
 
 .loader {
@@ -123,7 +120,7 @@ nav {
 }
 #button-login {
   border-radius: 20px;
-  width: 70px;
+  width: 78px;
   height: 35px;
   border: 0px;
   cursor: pointer;
@@ -146,6 +143,7 @@ a {
   width: 50px;
   background-color: white;
   border-radius: 50px;
+  overflow: hidden;
 }
 #profile-icon-div img {
   height: 50px;
@@ -168,8 +166,8 @@ a {
 .top-container .center-box > h1 {
   color: #fff;
   font-size: 3rem;
-  padding: 40px auto;
-  margin-top: -800px;
+  padding: 100px auto;
+  margin-top: -207px;
   font-family: discordfont;
 }
 
@@ -178,7 +176,7 @@ a {
   margin: 40px auto;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 1000px;
-  line-height: 40px;
+  line-height: 29px;
 }
 
 .top-container .center-box > .nav-buttons {
@@ -191,7 +189,7 @@ a {
 #opendis {
   /* font-family: discordfont; */
   font-size: medium;
-  width: 350px;
+  width: 284px;
   height: 50px;
   cursor: pointer;
 }
@@ -239,10 +237,6 @@ a {
   justify-content: center;
 }
 
-.container-img {
-  /* max-width: 678px;
-    max-height: 440px; */
-}
 .home-feed-images {
   max-width: 522px;
   height: 290px;
@@ -408,7 +402,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(/Homepage/images/snow.png);
+  background: url(../images/snow.png);
 }
 
 .snow {
@@ -432,8 +426,6 @@ footer {
   }
 }
 
-/* //////////////////////////////////////////////////////// */
-
 button,
 input {
   padding: 10px 20px;
@@ -444,9 +436,6 @@ input {
 button {
   cursor: pointer;
 }
-
-/* 
-/////////////////////////////////////////////// */
 
 .sparkle {
   position: absolute;
@@ -472,4 +461,8 @@ button {
     transform: translateY(-100px) scale(0.5);
     opacity: 0;
   }
+}
+
+#opendis {
+  border-color: green;
 }

@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    background-color: #5865f2;
+  }
+  nav {
+    height: 80px;
+    display: flex;
+    width: 85%;
+    padding-left: 30px;
+    margin: 0px 100px 0px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #logo-image {
+    max-width: 100%;
+  }
+  #button-login {
+    border-radius: 20px;
+    width: 70px;
+    height: 35px;
+    border: 0px;
+    cursor: pointer;
+  }
+  #button-login:hover {
+    color: blue;
+  }
+  #nav-items {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    /* color: white; */
+  }
+  #profile-icon-div {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50px;
+  }
+  #profile-icon-div img {
+    height: 50px;
+    width: 50px;
+  }
+  .top-container{
+    background-color: #5865f2;
+    height: 500px;
+  }
+  .top-container img{
+    width: 1105px;
+    height: 450px;
+    margin-top: 150px;
+    margin-left: 55px;
+    border-radius: 10px;
+  }
+  @font-face {
+    font-family: "discordfont";
+    src: url(../styles/Ginto-Nord-700.woff) format("woff");
+  }
+  .discord-customize{
+    margin-top: 145px;
+    margin-left: 60px;
+    margin-bottom: 100px;
+    font-family: discordfont;
+  }
+  .discord-customize p{
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .discord-customize h3{
+    color: #5865f2;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .discord-app{
+    display: flex;
+  }
+  .discord-app img{
+    height: 215px;
+    width: 535px;
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+  .discord-app-left{
+    margin-left: 30px;
+    flex: 1;
+  }
+  .discord-app-right{
+    flex: 1;
+  }
+  .discord-app h3{
+    color: #5865f2;
+    font-size: 15px;
+    margin-left: 10px;
+    line-height: 30px;
+    font-family: discordfont;
+  }
+  .discord-app p{
+    margin-left: 10px;
+    line-height: 30px;
+    font-family: Ginto Normal, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .middle-container{
+    display: flex;
+  }
+  .middle-container img{
+    height: 205px;
+    width: 350px;
+    margin-left: 40px;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+  .middle-container h3{
+    margin-left: 40px;
+  }
+  .middle-container p{
+    margin-left: 40px;
+  }
+  .discord-section{
+    height: 450px;
+  }

@@ -43,6 +43,7 @@ a {
   width: 50px;
   background-color: white;
   border-radius: 50px;
+  overflow: hidden;
 }
 #profile-icon-div img {
   height: 50px;
@@ -69,7 +70,7 @@ a {
 }
 @font-face {
   font-family: "discordfont";
-  src: url(/Safety/styles/Ginto-Nord-700.woff) format("woff");
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
 }
 .header-heading {
   color: white;
@@ -148,7 +149,16 @@ a {
   width: 150px;
   height: 150px;
   padding-right: 100px;
+  animation: twinkling 2s infinite;
 }
+ @keyframes twinkling {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
 .youtube-left-star {
   flex: 1;
   padding-top: 100px;
@@ -156,11 +166,12 @@ a {
 .youtube-right-star img {
   width: 140px;
   height: 150px;
+  animation: twinkling 2s infinite;
 }
 .youtube-right-star {
   flex: 1;
   padding-top: 350px;
-  padding-left: 100px;
+  padding-left: 108px;
 }
 .safety-detail-content {
   display: flex;
@@ -236,7 +247,7 @@ a {
   }
 }
 .arrow img {
-  width: 15px;
+  width: 10px;
   height: 10px;
   border-radius: 10px;
   padding-left: 5px;
@@ -312,44 +323,19 @@ footer {
   width: 50px;
 }
 .safety-detail-image img:hover {
-  animation: shake 3s;
-  animation-iteration-count: infinite;
+  background-size: cover;
+  animation: slideUp 1s ease-out;
+  transition: transform 0.3s;
+  transform: scale(1.1);
 }
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
+  @keyframes zoomIn {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1); 
+    }
   }
-  10% {
-    transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
 .header-next {
   display: flex;
   background-color: #5865f2;
@@ -386,174 +372,4 @@ footer {
   font-size: 15px;
   padding-bottom: 13px;
   line-height: 24px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #5865f2;
-  /* padding: 16px 20px; */
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 90px;
-  height: 90px;
-  border-radius: 90px;
-  display: inline-block;
-}
-.discord-popup-image {
-  width: 90px;
-  height: 90px;
-  border-radius: 90px;
-  /* padding: 16px 20px; */
-  bottom: 23px;
-  right: 28px;
-}
-
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
-
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
-
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: #5865f2;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: white;
-  border: solid #5865f2;
-  color: #5865f2;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover,
-.open-button:hover {
-  opacity: 1;
-}
-.chat-popup h1 {
-  color: #5865f2;
-}
-.chat-popup b {
-  color: #5865f2;
-  font-size: 26px;
-}
-
-#chat1 .form-outline .form-control ~ .form-notch div {
-  pointer-events: none;
-  border: 1px solid;
-  border-color: #eee;
-  box-sizing: border-box;
-  background: transparent;
-}
-
-#chat1 .form-outline .form-control ~ .form-notch .form-notch-leading {
-  left: 0;
-  top: 0;
-  height: 100%;
-  border-right: none;
-  border-radius: 0.65rem 0 0 0.65rem;
-}
-
-#chat1 .form-outline .form-control ~ .form-notch .form-notch-middle {
-  flex: 0 0 auto;
-  max-width: calc(100% - 1rem);
-  height: 100%;
-  border-right: none;
-  border-left: none;
-}
-
-#chat1 .form-outline .form-control ~ .form-notch .form-notch-trailing {
-  flex-grow: 1;
-  height: 100%;
-  border-left: none;
-  border-radius: 0 0.65rem 0.65rem 0;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-leading {
-  border-top: 0.125rem solid #39c0ed;
-  border-bottom: 0.125rem solid #39c0ed;
-  border-left: 0.125rem solid #39c0ed;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-leading,
-#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-leading {
-  border-right: none;
-  transition: all 0.2s linear;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-middle {
-  border-bottom: 0.125rem solid;
-  border-color: #39c0ed;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-middle,
-#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-middle {
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  transition: all 0.2s linear;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
-  border-top: 0.125rem solid #39c0ed;
-  border-bottom: 0.125rem solid #39c0ed;
-  border-right: 0.125rem solid #39c0ed;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-notch .form-notch-trailing,
-#chat1 .form-outline .form-control.active ~ .form-notch .form-notch-trailing {
-  border-left: none;
-  transition: all 0.2s linear;
-}
-
-#chat1 .form-outline .form-control:focus ~ .form-label {
-  color: #39c0ed;
-}
-
-#chat1 .form-outline .form-control ~ .form-label {
-  color: #bfbfbf;
 }
