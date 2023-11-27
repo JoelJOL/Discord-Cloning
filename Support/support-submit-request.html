@@ -93,25 +93,51 @@
     <div class="submit-request-title">
       <h1>Submit a request</h1>
       <h3>What can we help you with?</h3>
-      <select id="submit-request-list">
-        <option selected disabled>-</option>
-        <option href="../Support/support-submit-request-help.html">
-          Help and support
-        </option>
-        <option href="../Support/support-submit-request-hacked.html">
-          Hacked Account
-        </option>
+      <select id="submit-request-list" onchange="showForm()">
+        <option selected>-</option>
+        <option id="helpsup">Help and support</option>
+        <option id="hacked">Hacked Account</option>
       </select>
     </div>
+    <form id="helpsup_form" hidden>
+      <label for="email_box" class="email_label">Your email address</label>
+      <input type="email" id="email_box" class="form-control" />
+      <label for="subject_box" class="subject_label">Subject</label>
+      <input type="text" id="subject_box" class="form-control" />
+      <label for="description_box" class="description_label">Description</label>
+      <input type="text" id="description_box" class="form-control" />
+    </form>
+    <form id="hacked_form" hidden>
+      <label for="email_box" class="email_label">Your email address</label>
+      <input type="email" id="email_box" class="form-control" />
+      <label for="discordID_box" class="id_label">Your Discord ID</label>
+      <input type="text" id="discordID_box" class="form-control" />
+      <label for="discordemail_box" class="discordemail_label"
+        >Email address of account(Before it was compromised)</label
+      >
+      <input type="email" id="discordemail_box" class="form-control" />
+      <label for="subject_box" class="subject_label">Subject</label>
+      <input type="text" id="subject_box" class="form-control" />
+      <label for="description_box" class="description_label">Description</label>
+      <input type="text" id="description_box" class="form-control" />
+    </form>
     <br />
     <br />
     <br />
     <footer class="more-links">
-      <a href="../Support/support.html">
-        <button class="learn-more" type="button">Learn More</button></a
-      >
+      <div class="learn-more-btn">
+        <a href="support.html">
+          <button class="learn-more" type="button">Learn More</button></a
+        >
+      </div>
+      <br />
+      <hr />
+      <div class="Links-list">
+        <h2>More Links:</h2>
+      </div>
     </footer>
   </body>
+  <script src="js/support-submit-request.js"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
