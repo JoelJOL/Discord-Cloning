@@ -22,7 +22,7 @@ async function getData(url1: string): Promise<void> {
 
       let dynamicImage = document.createElement("img");
       dynamicImage.classList.add("home-feed-images");
-      dynamicImage.src = responseData.photos[i].url; // Corrected this line
+      dynamicImage.src = responseData.photos[i].url; 
 
       let rowtext = document.createElement("div");
       rowtext.classList.add("description");
