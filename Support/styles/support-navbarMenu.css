@@ -62,4 +62,106 @@
   font-size: 20px;
   text-decoration: none;
   border: none;
+  transition: all ease-in-out 0.7s;
+}
+button:hover {
+  background-color: #5865f2;
+}
+.app-icons {
+  height: 200px;
+  justify-content: space-evenly;
+}
+.browser-content {
+  height: 240px;
+  overflow: hidden;
+}
+.app-icons .browser-content .browser-icons img {
+  opacity: 0.3;
+}
+.browser-icons {
+  height: auto;
+  width: 300px;
+  left: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 120px;
+}
+.browser-image {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+#mozilla-icon-container {
+  height: 64px;
+  width: 64px;
+}
+#mozilla_logo,
+#chrome_logo,
+#opera_logo {
+  height: 64px;
+  width: 64px;
+  transition: opacity ease-in-out 0.5s;
+}
+#mozilla_logo:hover,
+#chrome_logo:hover,
+#opera_logo:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.phone-content {
+  width: auto;
+  overflow: hidden;
+}
+.phone-image {
+  overflow: hidden;
+  height: 135px;
+  margin-top: 82px;
+}
+.phone-image img {
+  width: 150px;
+  height: 300px;
+}
+.android-content {
+  position: relative;
+}
+.android-icon-image {
+  position: absolute;
+  margin-top: 180px;
+}
+.apple-phone-image {
+  overflow: hidden;
+  height: 135px;
+  margin-top: 82px;
+  left: 50px;
+}
+.apple-phone-image img {
+  width: 150px;
+  height: 300px;
+}
+.links_list {
+  box-shadow: 5px #000000;
+}
+.link_title {
+  color: #ffffff;
+}
+.link_title hr {
+  width: 20%;
+  align-content: left;
+  margin: 0;
+}
+.bottom_logo img {
+  width: 250px;
+  height: 50px;
+}
+ul {
+  list-style: none;
+}
+li a {
+  line-height: 30px;
+  text-decoration: none;
+  color: #ffffff;
+}
+li p {
+  color: #3ba55c;
 }
