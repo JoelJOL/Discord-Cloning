@@ -129,6 +129,8 @@ setTimeout(() => {
     });
   }
 }, 500);
+
+// discord chat button
 function openForm() {
   document.getElementsByClassName("card").style.display = "block";
 }

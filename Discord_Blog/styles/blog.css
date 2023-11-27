@@ -33,12 +33,14 @@
   #nav-items {
     width: 60%;
     display: flex;
-    justify-content: space-between;
-    align-items:end;
+    /* justify-content: space-between;
+    align-items:end; */
+    margin-left:320px;
   }
   a {
     text-decoration: none;
     color: white;
+    padding-left: 30px;
     /* color: white; */
   }
   #profile-icon-div {
@@ -129,4 +131,145 @@
   }
   .discord-section{
     height: 450px;
+  }
+  .bottom-container{
+    display: flex;
+    margin: 40px;
+    padding: 50px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+  }
+  .bottom-left img{
+  height: 200px;
+  width: 350px;
+  padding-top: 15px;
+  }
+  .bottom-right-top img{
+    height: 250px;
+    width: 650px;
+    border-radius: 10px;
+  }
+  .bottom-left{
+    flex: 1;
+  }
+  .bottom-right{
+    flex: 1;
+  }
+  .bottom-right-bottom img{
+    height: 150px;
+    width: 200px;
+    border-radius: 10px;
+  }
+  .bottom-right-bottom{
+    height: 200px;
+    width: 200px;
+  }
+  .bottom-right-bottom-container{
+   display: flex;
+   height: 250px;
+   padding-top: 50px;
+   justify-content: space-between;
+  }
+  .bottom-main-container{
+    background-color: white;
+  }
+  .bottom-container p{
+    line-height: 25px;
+    font-family: Ginto Normal, sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    padding-top:15px;
+  }
+  .bottom-left h2{
+    color: #5865f2;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: discordfont;
+    padding-top: 10px;
+  }
+  .bottom-left h4{
+    font-family: Ginto Nord, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .bottom-left button{
+    margin-top: 20px;
+    background-color: #5865f2;
+    border-radius: 40px;
+    border: 0px;
+    height: 60px;
+    width: 200px;
+    color: white;
+    font-size: 20px;
+    font-family: Ginto Nord, sans-serif;
+  }
+  footer {
+    background-color: #23272a;
+  }
+  .center-nav a:hover {
+    text-decoration: underline;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .footer-nav {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .socials {
+    flex: 1;
+    justify-content: space-between;
+    margin-top: 50px;
+    color: white;
+  }
+  .column {
+    margin-top: 50px;
+    text-decoration: none;
+    line-height: 30px;
+    margin-left: 20px;
+    color: #7289da;
+    margin-right: 50px;
+  }
+  .column a {
+    color: rgb(146, 139, 139);
+    text-decoration: none;
+  }
+  
+  .footer-bar {
+    display: flex;
+    border-top: 1px solid #7289da;
+  }
+  #x1 {
+    padding-top: 10px;
+    padding-right: 20px;
+  }
+  
+  .footer-bar-image img {
+    height: 60px;
+    width: 124px;
+    flex: 1;
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+  .footer-bar-signup {
+    align-items: end;
+    background-color: #5865f2;
+    border-radius: 28px;
+    font-size: 12px;
+    padding: 10px 20px;
+    font-weight: 500;
+  
+    height: 10px;
+    margin-left: 950px;
+    margin-top: 30px;
+    font-family: discordfont;
+    /* width: 10px; */
+  }
+  .footer-bar-signup a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #flag {
+    height: 30px;
+    width: 50px;
   }

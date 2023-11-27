@@ -88,3 +88,47 @@ display: flex;
     font-size: 16px;
     line-height: 24px;
 }
+
+/* Adjust the background colors and other styles as needed */
+.left-column {
+  background-color: #f6f6f6;
+  color: white;
+  padding: 20px;
+  margin-top: 100px;
+  float: left;
+  width: 50%;
+}
+
+.right-column {
+  background-color:#f6f6f6;
+  color: white;
+  padding: 50px;
+  float: left;
+  margin-top: 200px;
+ 
+  width: 50%;
+}
+
+/* Clear the float to prevent layout issues */
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#lap
+{
+  margin-top: 90px;
+}
+#mac
+{
+  margin-top: 90px;
+  margin-left: 10px;
+}
+#android
+{
+  margin-left: 10px;
+}
+
+
+

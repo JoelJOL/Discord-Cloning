@@ -1,3 +1,4 @@
+// user default input
 const userMessage = [
     ["hi", "hey", "hello"],
     ["sure", "yes", "no"],
@@ -72,6 +73,7 @@ const userMessage = [
     ["how can i report a bug or security vulnerability in the discord platform"],
     ["can i request additional support or resources for running a large community or server on discord"]
   ];
+  // bot default output
   const botReply = [
     ["Hello!", "Hi!", "Hey!", "Hi there!"],
     ["Okay"],
@@ -159,7 +161,7 @@ const userMessage = [
   ];
   
   const synth = window.speechSynthesis;
-  
+  // voice control
   function voiceControl(string) {
     let u = new SpeechSynthesisUtterance(string);
     u.text = string;
@@ -176,6 +178,7 @@ const userMessage = [
     input != "" && output(input);
     inputField.value = "";
   }
+  // send the message after pressing enter key
   document.addEventListener("DOMContentLoaded", () => {
     const inputField = document.getElementById("input");
     inputField.addEventListener("keydown", function (e) {
