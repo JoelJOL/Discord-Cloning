@@ -99,7 +99,7 @@ function getData(url1) {
 }
 getData(url1);
 document.addEventListener("DOMContentLoaded", function () {
-    // Add an event listener to the button
+    //  event listener to the button
     var openDisButton = document.getElementById("opendis");
     if (openDisButton) {
         openDisButton.addEventListener("click", function () {
@@ -132,13 +132,13 @@ document.addEventListener("DOMContentLoaded", function () {
     
 
         
-        // Insert the input after the button
+       
         (_a = button.parentNode) === null || _a === void 0 ? void 0 : _a.insertBefore(input, button.nextSibling);
         // Hide the button
         button.style.display = "none";
         // Focus on the input
         input.focus();
-        // Add a blur event listener to switch back to the button when the input loses focus
+        //  blur event listener to switch back to the button when the input loses focus
         input.addEventListener("blur", function () {
             var _a;
             // Remove the input
