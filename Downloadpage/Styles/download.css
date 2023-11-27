@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #23272a;
+
 }
 
 @font-face {
@@ -16,10 +16,7 @@
 header {
   background-color: #23272a;
 }
-/* .top-container
-{
-    background-color:  #23272a;
-} */
+
 
 .center-box {
   color: white;
