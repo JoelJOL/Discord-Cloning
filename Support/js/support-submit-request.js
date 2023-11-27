@@ -3,15 +3,19 @@ function showForm() {
   var generalHelpForm = document.getElementById("helpsup_form");
   var hackedForm = document.getElementById("hacked_form");
 
-  // Hide all forms by default
-  generalHelpForm.classList.add("hidden");
-  hackedForm.classList.add("hidden");
+  console.log(formSelector.value);
 
   // Show the selected form
   var selectedForm = formSelector.value;
   if (selectedForm === "helpsup") {
-    generalHelpForm.classList.remove("hidden");
-  } else if (selectedForm === "registration") {
-    hackedForm.classList.remove("hidden");
+    hackedForm.setAttribute("hidden", "hidden");
+    generalHelpForm.removeAttribute("hidden");
+  } else if (selectedForm === "hacked") {
+    console.log(245);
+    generalHelpForm.setAttribute("hidden", "hidden");
+    hackedForm.removeAttribute("hidden");
+  } else {
+    generalHelpForm.setAttribute("hidden", "hidden");
+    hackedForm.setAttribute("hidden", "hidden");
   }
 }

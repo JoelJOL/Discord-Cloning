@@ -62,16 +62,14 @@
   font-size: 20px;
   text-decoration: none;
   border: none;
+  transition: all ease-in-out 0.7s;
 }
-.attributions {
-  color: #ffffff;
-}
-.attributions a {
-  text-decoration: none;
-  color: #ffffff;
+button:hover {
+  background-color: #5865f2;
 }
 .app-icons {
   height: 200px;
+  justify-content: space-evenly;
 }
 .browser-content {
   height: 240px;
@@ -111,6 +109,59 @@
   opacity: 1;
   cursor: pointer;
 }
-button:hover {
-  background-color: #5865f2;
+.phone-content {
+  width: auto;
+  overflow: hidden;
+}
+.phone-image {
+  overflow: hidden;
+  height: 135px;
+  margin-top: 82px;
+}
+.phone-image img {
+  width: 150px;
+  height: 300px;
+}
+.android-content {
+  position: relative;
+}
+.android-icon-image {
+  position: absolute;
+  margin-top: 180px;
+}
+.apple-phone-image {
+  overflow: hidden;
+  height: 135px;
+  margin-top: 82px;
+  left: 50px;
+}
+.apple-phone-image img {
+  width: 150px;
+  height: 300px;
+}
+.links_list {
+  box-shadow: 5px #000000;
+}
+.link_title {
+  color: #ffffff;
+}
+.link_title hr {
+  width: 20%;
+  align-content: left;
+  margin: 0;
+}
+.bottom_logo img {
+  width: 250px;
+  height: 50px;
+}
+ul {
+  list-style: none;
+}
+li a {
+  line-height: 30px;
+  text-decoration: none;
+  color: #ffffff;
+}
+li p {
+  color: #3ba55c;
 }
