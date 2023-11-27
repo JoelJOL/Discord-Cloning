@@ -16,6 +16,10 @@
       rel="stylesheet"
       href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header>
@@ -244,8 +248,30 @@
               </div>
               <div class="category-server-number">3390</div>
             </div>
+            <div
+              id="all-category-music"
+              class="category"
+              onclick="displayMyServers()"
+            >
+              <div class="left-side-category">
+                <img
+                  src="/Discover/images/music-icon.png"
+                  class="category-image"
+                />
+                &nbsp;&nbsp;My Servers
+              </div>
+              <div class="category-server-number">
+                <p id="my-server-num" class="pt-3"></p>
+              </div>
+            </div>
           </div>
           <div id="div-with-feeds" class="col-lg-7 col-sm-12 col-sm-12">
+            <h2>30467 Results Found</h2>
+          </div>
+          <div
+            id="div-with-feeds-my"
+            class="col-lg-7 col-sm-12 col-sm-12 change-div"
+          >
             <h2>30467 Results Found</h2>
           </div>
         </div>
@@ -303,7 +329,7 @@
               data-bs-toggle="modal"
               class=""
             >
-              Join Discord
+              Start your server
             </button>
           </div>
         </div>
@@ -392,7 +418,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalToggleLabel">
-              Modal 1
+              Choose your Server Picture
             </h1>
             <button
               type="button"
@@ -402,16 +428,26 @@
             ></button>
           </div>
           <div class="modal-body container-fluid">
-            <h3 class="row d-flex justify-content-center">
-              Choose your Server Picture
-            </h3>
-            <form class="container-fluid">
-              <p class="row">Generate a random pic:</p>
-              <button class="row">Generate</button>
-              <div></div>
+            <!-- <h3 class="row d-flex justify-content-center">
+            Choose your Server Picture
+          </h3> -->
+            <div class="container-fluid">
+              <button
+                class="row btn generate-button"
+                onclick="getServerImage()"
+              >
+                Generate a random pic:</button
+              ><br />
+              <div id="your-server-image"></div>
+              <br />
+              <h5>Or</h5>
               <p class="row">Give your image link:</p>
-              <input placeholder="image url" type="text" />
-            </form>
+              <input
+                placeholder="image url"
+                id="server-image-url"
+                type="text"
+              />
+            </div>
           </div>
           <div class="modal-footer">
             <button
@@ -419,24 +455,25 @@
               data-bs-target="#exampleModalToggle2"
               data-bs-toggle="modal"
             >
-              Open second modal
+              Next >>
             </button>
           </div>
         </div>
       </div>
     </div>
+    <!-- modal 2 -->
     <div
       class="modal fade"
       id="exampleModalToggle2"
       aria-hidden="true"
       aria-labelledby="exampleModalToggleLabel2"
-      tabindex="-1"
+      tabindex="1"
     >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
-              Modal 2
+              Enter Server Details
             </h1>
             <button
               type="button"
@@ -446,17 +483,135 @@
             ></button>
           </div>
           <div class="modal-body">
-            Hide this modal and show the first with the button below.
+            <div class="container-fluid">
+              <p class="row modal-subhead">Server Name</p>
+              <input
+                class="row"
+                id="input-server-name"
+                type="text"
+                placeholder="Server Name"
+              /><br />
+              <p class="row modal-subhead">Server Category</p>
+              <!-- dropdown menu -->
+              <div class="dropdown-center row">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Select category
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" onclick="updateDropdown('Gaming')"
+                      >Gaming</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      onclick="updateDropdown('Entertainment')"
+                      >Entertainment</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      onclick="updateDropdown('Education')"
+                      >Education</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      onclick="updateDropdown('Science & Tech')"
+                      >Science & Tech</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" onclick="updateDropdown('Music')"
+                      >Music</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu ends -->
+              <br />
+              <p class="row modal-subhead">Access to users</p>
+              <label>
+                <input
+                  type="checkbox"
+                  id="publicCheckbox"
+                  name="visibility"
+                  onclick="handleCheckboxClick('publicCheckbox', 'privateCheckbox')"
+                />
+                Public(anyone can join)
+              </label>
+              <br /><br />
+              <label>
+                <input
+                  type="checkbox"
+                  id="privateCheckbox"
+                  name="visibility"
+                  onclick="handleCheckboxClick('privateCheckbox', 'publicCheckbox')"
+                />
+                Private(join with permission)
+              </label>
+            </div>
+            <p class="row modal-subhead">Write a short Description</p>
+            <textarea
+              class="row"
+              id="server-description"
+              placeholder="description"
+            >
+            </textarea>
           </div>
           <div class="modal-footer">
             <button
               class="btn btn-primary"
-              data-bs-target="#exampleModalToggle"
+              data-bs-target="#exampleModalToggle3"
               data-bs-toggle="modal"
+              onclick="saveServerData()"
             >
-              Back to first
+              Next >>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal 2 ends -->
+    <!-- modal 3 begins -->
+    <div
+      class="modal fade"
+      id="exampleModalToggle3"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel3"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">
+              Create Server
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid d-flex justify-content-center">
+              <button class="button btn-primary">
+                <span class="submit">Create</span>
+                <span class="loading"><i class="fa fa-refresh"></i></span>
+                <span class="check"><i class="fa fa-check"></i></span>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
