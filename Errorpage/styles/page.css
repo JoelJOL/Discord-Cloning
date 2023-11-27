@@ -1,0 +1,13 @@
+body {
+  background-image: linear-gradient(
+    rgba(42, 94, 232, 1) 39%,
+    rgba(110, 148, 254, 1) 100%
+  );
+  color: white;
+  font-family: "discordfont";
+}
+
+@font-face {
+  font-family: "discordfont";
+  src: url(../styles/Ginto-Nord-700.woff) format("woff");
+}
