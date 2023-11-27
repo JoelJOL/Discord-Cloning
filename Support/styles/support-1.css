@@ -6,6 +6,9 @@
   position: relative;
   z-index: 1;
 }
+.card a:hover {
+  cursor: pointer;
+}
 .card .card-link {
   text-decoration: none;
   position: static;
